@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    background-color: #101111;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+main label {
+    display: block;
+
+}
+
+main input {
+    border: 2px solid #101111;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+}
+
+main {
+    background-color: #101111;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(241, 161, 11);
+    gap: 5px;
+}
+
+main .botao {
+    padding: 10px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.logo-comanda {
+    width: 15em;
+    margin: 0;
+}
