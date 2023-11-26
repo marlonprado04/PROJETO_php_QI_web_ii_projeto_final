@@ -1,79 +1,87 @@
 .container {
-  background-color: grey;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: orangered;
+  background-position: auto;
   width: 500px;
   height: 700px;
   margin: auto;
 }
 
-.div_image {
-  background-color: aqua;
-  margin-left: 103px;
-  margin-top: 20px;
-  width: 300px;
-  height: 200px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .item_image {
-
   max-width: 100%;
   max-width: 100%;
-
-}
-
-.item_name {
-  text-align: center;
-  width: 300px;
-  margin-left: 85px;
-}
-
-.item_description {
-
-  width: 350px;
-  height: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-}
-
-.item_price {
-  position: relative;
-  margin-left: 200px;
-  margin-top: 20px;
-  width: 60px;
-  height: 30px;
-
-}
-
-.item_reduc {
-  border-radius: 5px;
-  position: relative;
-  margin-left: 195px;
-  margin-top: 20px;
-  width: 30px;
-  height: 30px;
-}
-
-.item_sum {
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
 }
 
 .item_retorna {
+  padding: 10px;
+  border: none;
   border-radius: 5px;
-  margin-left: 150px;
-  margin-top: 20px;
-  width: 85px;
-  height: 30px;
+  cursor: pointer;
 }
 
 .item_adds {
+  padding: 10px;
+  border: none;
   border-radius: 5px;
-  width: 85px;
-  height: 30px;
+  cursor: pointer;
 }
 
 .label_obs {
   margin-left: 58px;
+}
+
+body {
+  background-color: #101111;
+  color: white;
+}
+
+.descricao {
+  text-align: center;
+  height: 100px;
+  width: 300px;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.item_sum {
+  padding: 8px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+
+.item_reduc {
+  padding: 8px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+}
+
+.item_quantity {
+  padding: 8px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
 }
