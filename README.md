@@ -7,6 +7,7 @@ Projeto final da disciplina de Web II do curso Técnico em Informática
 - [Projeto final - Web II](#projeto-final---web-ii)
   - [Índice](#índice)
   - [Links](#links)
+  - [Informações do ambiente](#informações-do-ambiente)
 
 ## Links
 
@@ -19,3 +20,10 @@ Protótipo de tela no Figma, [neste link](https://www.figma.com/community/file/1
 Diagrama de classes [neste link](https://lucid.app/lucidchart/invitations/accept/inv_820655b4-75b2-46eb-85a5-676e9abfa09b)
 
 Fluxograma de processos [neste link](https://lucid.app/lucidchart/16150dc4-73be-4cf6-9209-331a17ee4807/edit?page=0_0#)
+
+## Informações do ambiente
+
+Versões dos programas
+
+- Xampp: 8.2.12
+- MySQL Workbench: 8.0.34
