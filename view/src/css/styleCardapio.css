@@ -1,0 +1,96 @@
+body {
+    background-color:rgb(236, 85, 15);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  main.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2%;
+  }
+
+  .item_container {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .item_container:hover {
+    transform: scale(1.05);
+  }
+
+  .img_container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  h3 {
+    margin: 10px 0;
+    color: #333;
+  }
+
+  p {
+    margin: 8px 0;
+    color: #666;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+  button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .orange-background {
+    background-color: #ffA500; /* Cor de fundo laranja */
+    color: white; /* Cor do texto branco para melhor legibilidade */
+  }
+
+  .item_container {
+    background-color: #ffA500; /* Cor de fundo laranja para .item_container */
+    padding: 10px; /* Ajuste o preenchimento conforme necessário */
+  }
+  .item_container {
+    background-color: #ffA500; /* Cor de fundo laranja para .item_container */
+    padding: 10px; /* Ajuste o preenchimento conforme necessário */
+    margin-bottom: 20px; /* Adicione espaço entre as divs, se desejar */
+  }
+
+  
+  
