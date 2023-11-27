@@ -15,5 +15,3 @@ Para entrar no quadro de tarefas do Trello, acessar [este link](https://trello.c
 Para acessar o levantamento de requisitos original, acessar [este link](https://docs.google.com/document/d/1RAR_Hry-Oa3pwCRsgYGOcm5L7HKt5efQbejKSsrCAIk/edit?usp=sharing)
 
 O protótipo de tela no Figma pode ser acessado [neste link](https://www.figma.com/community/file/1310273585439482768)
-
-Teste
