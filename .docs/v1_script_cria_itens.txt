@@ -1,4 +1,7 @@
 -- Inserir valores na tabela item
+
+USE poa_burguer;
+
 INSERT INTO item (nome, preco, descricao, imagem)
 VALUES
 
