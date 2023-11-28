@@ -2,30 +2,29 @@
 INSERT INTO item (nome, preco, descricao, imagem)
 VALUES
 
-   1 ('JARDIM BOTANICO',30.30, 'Pao Com Gergelin, Hamburguer De Soja, Tomate,Rucula,Cebola Roxa.', 'https://bing.com/th?id=OSK.67c9c03e17a2b0f4c3824e28bea284b8'),
+    ('JARDIM BOTANICO',30.30, 'Pao Com Gergelin, Hamburguer De Soja, Tomate,Rucula,Cebola Roxa.', 'https://bing.com/th?id=OSK.67c9c03e17a2b0f4c3824e28bea284b8'),
 
-   2 ('BOM FIM',32.50, 'Pao Cervejinha, Hamburguer Bovino, Maionese Da Casa, Molho Champignon e Rucula.', 'https://www.minhareceita.com.br/app/uploads/2020/07/dhamburguer-champignon.jpg'),
+    ('BOM FIM',32.50, 'Pao Cervejinha, Hamburguer Bovino, Maionese Da Casa, Molho Champignon e Rucula.', 'https://www.minhareceita.com.br/app/uploads/2020/07/dhamburguer-champignon.jpg'),
 
-   3 ('MONT SERRAT',40.42, 'Pao Mix Graos, Duplo hamburguer, Queijo Mussarela, Molho Cheddar e Mix Salada.', 'https://receitinhas.com.br/wp-content/uploads/2022/09/230446-730x365.jpg'),
-
-
-   4 ('CIDADE BAIXA ',31.50 , 'Pao Gergelin Grelhado, Hamburguer Bovino Grelhado, Cebola, Alface, Tomate, Queijo Mussarela e Maionese.', 'https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2007/02/hamburguer-caseiro.jpg?fit=960%2C540&ssl=1'),
+    ('MONT SERRAT',40.42, 'Pao Mix Graos, Duplo hamburguer, Queijo Mussarela, Molho Cheddar e Mix Salada.', 'https://receitinhas.com.br/wp-content/uploads/2022/09/230446-730x365.jpg'),
 
 
-   5 ('MENINO DEUS', 29.99, 'Pao Brioche, Hamburguer Empanado Frango, Bacon, Alface e Molho Do Chefe.', 'https://s2.glbimg.com/uvoa0rWBB3ywomEhtc74OPxQrjo=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_5dfbcf92c1a84b20a5da5024d398ff2f/internal_photos/bs/2022/Q/K/4pDRJAQqAbvbTKCVKVsg/2017-07-27-smart-burguer-cocoricrok-creditos-wellington-nemeth.jpg'); 
+    ('CIDADE BAIXA ',31.50 , 'Pao Gergelin Grelhado, Hamburguer Bovino Grelhado, Cebola, Alface, Tomate, Queijo Mussarela e Maionese.', 'https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2007/02/hamburguer-caseiro.jpg?fit=960%2C540&ssl=1'),
 
 
-   6 ('AZENHA ',26.15, 'Pao Brioche, Hamburguer Bovino, Bacon, Cebola Caramelizada, Queijo Cheddar e Maionese.', 'https://media.gazetadopovo.com.br/2021/05/24202047/hamburguer-janelabar-divulgacao-960x540.jpg'),
+    ('MENINO DEUS', 29.99, 'Pao Brioche, Hamburguer Empanado Frango, Bacon, Alface e Molho Do Chefe.', 'https://s2.glbimg.com/uvoa0rWBB3ywomEhtc74OPxQrjo=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_5dfbcf92c1a84b20a5da5024d398ff2f/internal_photos/bs/2022/Q/K/4pDRJAQqAbvbTKCVKVsg/2017-07-27-smart-burguer-cocoricrok-creditos-wellington-nemeth.jpg'),
+
+
+   ('AZENHA',26.15, 'Pao Brioche, Hamburguer Bovino, Bacon, Cebola Caramelizada, Queijo Cheddar e Maionese.', 'https://media.gazetadopovo.com.br/2021/05/24202047/hamburguer-janelabar-divulgacao-960x540.jpg'),
  
 
-   7 ('PRAIA DE BELAS',45.50, 'Pao Com Gergelin, Hamburguer Bovino Grelhado, Tomate, Cebola, Mix De Pimentao, Alface e Maionese.', 'https://ichef.bbci.co.uk/news/640/cpsprodpb/98ac/live/a4e076f0-4c2c-11ee-a928-53057d3785fc.png'),
+    ('PRAIA DE BELAS',45.50, 'Pao Com Gergelin, Hamburguer Bovino Grelhado, Tomate, Cebola, Mix De Pimentao, Alface e Maionese.', 'https://ichef.bbci.co.uk/news/640/cpsprodpb/98ac/live/a4e076f0-4c2c-11ee-a928-53057d3785fc.png'),
 
 
-   8 ('INDEPENDENCIA', 15.90, 'Pao Com Gergelin Grelhado, Hamburguer De Costela, Bacon, Alface, Queijo Mussarela e Maionese.', 'https://catracalivre.com.br/wp-content/uploads/2023/05/dia-do-hamburguer-13-lugares-descolados-em-sp-910x607.jpg'),
+    ('INDEPENDENCIA', 15.90, 'Pao Com Gergelin Grelhado, Hamburguer De Costela, Bacon, Alface, Queijo Mussarela e Maionese.', 'https://catracalivre.com.br/wp-content/uploads/2023/05/dia-do-hamburguer-13-lugares-descolados-em-sp-910x607.jpg'),
     
 
-   9 ('MOINHOS DE VENTO',40.80, 'Pao Brioche, Hamburguer De Picanha, Queijo Cheddar, Bacon, Tomate, Alface e Maionese.', 'img:https://vivariomarrecife.com.br/wp-content/uploads/2021/05/La%C3%A7a-Burger-cortada.jpg');
+   ('MOINHOS DE VENTO',40.80, 'Pao Brioche, Hamburguer De Picanha, Queijo Cheddar, Bacon, Tomate, Alface e Maionese.', 'img:https://vivariomarrecife.com.br/wp-content/uploads/2021/05/La%C3%A7a-Burger-cortada.jpg'),
 
 
-   10 ('CENTRO HISTORICO',27.90, 'Pao Com Gergelin, Hamburguer Empanado Bovino, Maionese, Queijo cheddar, Tomate e Alface.', 'https://cdn.casaeculinaria.com/wp-content/uploads/2023/04/05163949/Hamburguer-artesanal.webp'),
-.
+   ('CENTRO HISTORICO',27.90, 'Pao Com Gergelin, Hamburguer Empanado Bovino, Maionese, Queijo cheddar, Tomate e Alface.', 'https://cdn.casaeculinaria.com/wp-content/uploads/2023/04/05163949/Hamburguer-artesanal.webp');

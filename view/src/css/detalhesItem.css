@@ -3,11 +3,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: orangered;
+  background-color: orange;
   background-position: auto;
   width: 500px;
   height: 700px;
   margin: auto;
+  border-color: aliceblue;
+  border-style: solid;
+  border-radius: 5px;
+
+
 }
 
 * {
@@ -39,7 +44,7 @@
 }
 
 body {
-  background-color: #101111;
+  background-color:rgb(236, 85, 15);
   color: white;
 }
 
