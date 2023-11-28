@@ -32,7 +32,7 @@
             src="https://bing.com/th?id=OSK.67c9c03e17a2b0f4c3824e28bea284b8">
         </div>
         <h3>JARDIM BOTANICO</h3>
-        <p>R$ 27,90</p>
+        <p>R$ 27.90</p>
         <button>DETALHES</button>
       </div>
 
@@ -41,7 +41,7 @@
           <img class="img" src="https://www.minhareceita.com.br/app/uploads/2020/07/dhamburguer-champignon.jpg">
         </div>
         <h3>BOM FIM</h3>
-        <p>R$ 32,50</p>
+        <p>R$ 32.50</p>
         <button>DETALHES</button>
       </div>
 
