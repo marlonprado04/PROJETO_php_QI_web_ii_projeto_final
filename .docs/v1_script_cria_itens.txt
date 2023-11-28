@@ -1,0 +1,7 @@
+-- Inserir valores na tabela item
+INSERT INTO item (nome, preco, descricao, imagem)
+VALUES
+    ('Produto1', 19.99, 'Descrição do Produto 1', 'imagem1.jpg'),
+    ('Produto2', 29.99, 'Descrição do Produto 2', 'imagem2.jpg'),
+    ('Produto3', 9.99, 'Descrição do Produto 3', 'imagem3.jpg'),
+    ('Produto4', 39.99, 'Descrição do Produto 4', 'imagem4.jpg');
