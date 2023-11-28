@@ -27,3 +27,7 @@ Versões dos programas
 
 - Xampp: 8.2.12
 - MySQL Workbench: 8.0.34
+
+Porta utilizada no MySQL: 3306
+Usuário: root
+Senha: (em branco)
