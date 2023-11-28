@@ -23,7 +23,7 @@
             <li> <a href="../index.php">Index</a></li>
             <li> <a href="cardapio.php">Cardapio</a></li>
             <li> <a href="#">Cadastro Comanda</a></li>
-            <li> <a href="cardapio.php">Detalhes Item</a></li>
+            <li> <a href="detalhesItem.php">Detalhes Item</a></li>
             <li> <a href="detalhesComanda.php">Detalhes Comanda</a></li>
         </ol>
     </header>
