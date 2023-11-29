@@ -6,7 +6,8 @@ Projeto final da disciplina de Web II do curso Técnico em Informática
 
 - [Projeto final - Web II](#projeto-final---web-ii)
   - [Índice](#índice)
-  - [Links](#links)
+  - [Links externos](#links-externos)
+  - [Links Internos](#links-internos)
   - [Informações do ambiente](#informações-do-ambiente)
 
 ## Links externos
@@ -23,11 +24,11 @@ Fluxograma de processos [neste link](https://lucid.app/lucidchart/16150dc4-73be-
 
 ## Links Internos
 
-Estrutura de pastas MVC idealizada inicialmente [neste link](./docs/estrutura)
+Estrutura de pastas MVC idealizada inicialmente [neste link](.docs/v1_estrutura_pastas.jpeg)
 
-Script para criação do banco de dados [neste link](./docs/v1_script_banco)
+Script para criação do banco de dados [neste link](.docs/v1_script_cria_banco_dados.txt)
 
-Script para criação de elementos dentro do banco de dados [neste link](./docs/v1_script_banco)
+Script para criação de elementos dentro do banco de dados [neste link](.docs/v1_script_cria_itens.txt)
 
 ## Informações do ambiente
 
