@@ -1,0 +1,32 @@
+USE poa_burguer;
+
+INSERT INTO comanda (numero_comanda)
+VALUES
+(102030),
+(302010),
+(402030),
+(502090),
+(209030),
+(525354),
+(919593),
+(717273),
+(818283),
+(616263);
+
+
+
+USE poa_burguer;
+
+INSERT INTO mesa  (numero_mesa)
+VALUES
+
+(1),
+(2),
+(3),
+(4),
+(5), 
+(7),
+(8),
+(9),
+(10);
+
