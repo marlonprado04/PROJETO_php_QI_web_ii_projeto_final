@@ -1,6 +1,6 @@
--- Inserir valores na tabela item
-
 USE poa_burguer;
+
+-- Inserir valores na tabela item
 
 INSERT INTO item (nome, preco, descricao, imagem)
 VALUES
@@ -31,3 +31,35 @@ VALUES
 
 
    ('CENTRO HISTORICO',27.90, 'Pao Com Gergelin, Hamburguer Empanado Bovino, Maionese, Queijo cheddar, Tomate e Alface.', 'https://cdn.casaeculinaria.com/wp-content/uploads/2023/04/05163949/Hamburguer-artesanal.webp');
+
+
+-- Inserir valores na tabela comanda
+
+INSERT INTO comanda (numero_comanda)
+VALUES
+(102030),
+(302010),
+(402030),
+(502090),
+(209030),
+(525354),
+(919593),
+(717273),
+(818283),
+(616263);
+
+-- Inserir valores na tabela mesa
+
+INSERT INTO mesa  (numero_mesa)
+VALUES
+
+(1),
+(2),
+(3),
+(4),
+(5), 
+(7),
+(8),
+(9),
+(10);
+
