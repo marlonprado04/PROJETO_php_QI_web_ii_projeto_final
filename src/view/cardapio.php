@@ -26,102 +26,44 @@
 
     <main>
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://bing.com/th?id=OSK.67c9c03e17a2b0f4c3824e28bea284b8">
-        </div>
-        <h3>JARDIM BOTANICO</h3>
-        <p>R$ 27.90</p>
-        <button>DETALHES</button>
-      </div>
+      <?php
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img" src="https://www.minhareceita.com.br/app/uploads/2020/07/dhamburguer-champignon.jpg">
-        </div>
-        <h3>BOM FIM</h3>
-        <p>R$ 32.50</p>
-        <button>DETALHES</button>
-      </div>
+      use Marlon\QiWebIiProjetoFinal\model\Item;
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img" src="https://receitinhas.com.br/wp-content/uploads/2022/09/230446-730x365.jpg">
-        </div>
-        <h3>MONT SERRAT</h3>
-        <p>R$ 40.42</p>
-        <button>DETALHES</button>
-      </div>
+      session_start();
+      ?>
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://i0.wp.com/pat.feldman.com.br/wp-content/uploads/2007/02/hamburguer-caseiro.jpg?fit=960%2C540&ssl=1">
-        </div>
-        <h3>CIDADE BAIXA</h3>
-        <p>R$ 31.50</p>
-        <button>DETALHES</button>
-      </div>
+      <?php
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img" src="https://s2.glbimg.com/uvoa0rWBB3ywomEhtc74OPxQrjo=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_5dfbcf92c1a84b20a5da5024d398ff2f/internal_photos/bs/2022/Q/K/4pDRJAQqAbvbTKCVKVsg/2017-07-27-smart-burguer-cocoricrok-creditos-wellington-nemeth.jpg">
-        </div>
-        <h3>MENINO DEUS</h3>
-        <p>R$ 29.99</p>
-        <button>DETALHES</button>
-      </div>
+      if (empty($_SESSION["list_of_itens"])):
+        ?>
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://media.gazetadopovo.com.br/2021/05/24202047/hamburguer-janelabar-divulgacao-960x540.jpg">
+        <div>
+          <p>Nenhum item cadastrado na base de dados!</p>
         </div>
-        <h3>AZENHA</h3>
-        <p>R$ 26.15</p>
-        <button>DETALHES</button>
-      </div>
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/98ac/live/a4e076f0-4c2c-11ee-a928-53057d3785fc.png">
-        </div>
-        <h3>PRAIA DE BELAS</h3>
-        <p>R$ 45.50</p>
-        <button>DETALHES</button>
-      </div>
+        <?php
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://catracalivre.com.br/wp-content/uploads/2023/05/dia-do-hamburguer-13-lugares-descolados-em-sp-910x607.jpg">
-        </div>
-        <h3>INDEPENDENCIA</h3>
-        <p>R$ 15.90</p>
-        <button>DETALHES</button>
-      </div>
+      endif;
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://vivariomarrecife.com.br/wp-content/uploads/2021/05/La%C3%A7a-Burger-cortada.jpg">
+      foreach ($_SESSION["list_of_itens"] as $item):
+        ?>
+        <div class="item_container">
+          <div class="img_container">
+            <img class="img" src="<?= $item["imagem"] ?>">
+          </div>
+          <h3>
+            <?= $item["nome"] ?>
+          </h3>
+          <p>R$
+            <?= $item["preco"] ?>
+          </p>
+          <button>DETALHES</button>
         </div>
-        <h3>MOINHOS DE VENTO</h3>
-        <p>R$ 40.80</p>
-        <button>DETALHES</button>
-      </div>
+        <?php
+      endforeach;
 
-      <div class="item_container">
-        <div class="img_container">
-          <img class="img"
-            src="https://cdn.casaeculinaria.com/wp-content/uploads/2023/04/05163949/Hamburguer-artesanal.webp">
-        </div>
-        <h3>CENTRO HISTORICO </h3>
-        <p>R$ 30.30</p>
-        <button>DETALHES</button>
-      </div>
+      ?>
 
     </main>
   </div>

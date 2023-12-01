@@ -1,54 +1,56 @@
 <?php
+
+// Definindo namespace
+namespace Marlon\QiWebIiProjetoFinal\model;
+
 class Item {
     private $id;
-    private $imagem;
     private $nome;
-    private $descricao;
     private $preco;
+    private $descricao;
+    private $imagem;
 
-    // Construtor
-    public function __construct($id, $imagem, $nome, $descricao, $preco) {
+    // Criando construtor
+    public function __construct($id, $nome, $preco) {
         $this->id = $id;
-        $this->imagem = $imagem;
         $this->nome = $nome;
-        $this->descricao = $descricao;
         $this->preco = $preco;
     }
 
     // Métodos Getters e Setters
-    public function getId() {
+    public function _getId() {
         return $this->id;
     }
     
-    public function getImagem() {
+    public function __getImagem() {
         return $this->imagem;
     }
 
-    public function setImagem($imagem) {
+    public function __setImagem($imagem) {
         $this->imagem = $imagem;
     }
 
-    public function getNome() {
+    public function __getNome() {
         return $this->nome;
     }
 
-    public function setNome($nome) {
+    public function __setNome($nome) {
         $this->nome = $nome;
     }
 
-    public function getDescricao() {
+    public function __getDescricao() {
         return $this->descricao;
     }
 
-    public function setDescricao($descricao) {
+    public function __setDescricao($descricao) {
         $this->descricao = $descricao;
     }
 
-    public function getPreco() {
+    public function __getPreco() {
         return $this->preco;
     }
 
-    public function setPreco($preco) {
+    public function __setPreco($preco) {
         $this->preco = $preco;
     }
 }
