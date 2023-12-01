@@ -11,7 +11,6 @@ Projeto final da disciplina de Web II do curso Técnico em Informática
   - [Informações do ambiente](#informações-do-ambiente)
   - [Como usar o programa](#como-usar-o-programa)
 
-
 ## Links externos
 
 Quadro de tarefas do Trello [neste link](https://trello.com/invite/b/XLYte3T4/ATTIbcda5e0c235e90f55aa39489d3fd1725E6F8D5E6/assis-brasil-noite)
@@ -55,5 +54,5 @@ Para utilizar o programa seguir os passos abaixo:
 2. Adicionar o projeto na pasta `htdocs` dentro do XAMPP
 3. Configurar as variáveis de acesso ao banco dentro do arquivo `Config.php` na raiz do projeto, de acordo com as configurações de portas do MySQL Workbench ou MySQL Admin (dentro do XAMPP)
 4. Utilizar o script de criação de banco contido na pasta `.docs` para criar a estrutura inicial do banco de dados
-5. Utilizar o script de adição de valores ao banco contido na pasta `.docs` 
+5. Utilizar o script de adição de valores ao banco contido na pasta `.docs`
 6. Acessar o localhost na porta configurada no XAMPP e acessar a pasta do projeto
