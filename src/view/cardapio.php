@@ -13,7 +13,7 @@
 
   <header>
     <ol>
-      <li> <a href="../index.php">Index</a></li>
+      <li> <a href="../../index.php">Index</a></li>
       <li> <a href="#">Cardapio</a></li>
       <li> <a href="cadastroComanda.php">Cadastro Comanda</a></li>
       <li> <a href="cardapio.php">Detalhes Item</a></li>

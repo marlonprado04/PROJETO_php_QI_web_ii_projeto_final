@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sa/css/reset.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/cadastroComanda.css">
 
 
@@ -20,7 +20,7 @@
 
     <header>
         <ol>
-            <li> <a href="../index.php">Index</a></li>
+            <li> <a href="../../index.php">Index</a></li>
             <li> <a href="cardapio.php">Cardapio</a></li>
             <li> <a href="#">Cadastro Comanda</a></li>
             <li> <a href="detalhesItem.php">Detalhes Item</a></li>
