@@ -1,7 +1,4 @@
 <?php
-// Definindo namespace
-namespace Marlon\QiWebIiProjetoFinal\model\repository;
-
 // Definindo DSN (Data Source Name)
 // SGBD: mysql
 // Porta: 3306
