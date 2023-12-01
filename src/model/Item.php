@@ -1,5 +1,5 @@
 <?php
-class ItemModel {
+class Item {
     private $id;
     private $imagem;
     private $nome;
