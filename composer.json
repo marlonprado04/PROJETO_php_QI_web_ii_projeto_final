@@ -1,0 +1,17 @@
+{
+    "name": "marlon/qi_web_ii_projeto_final",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Marlon\\QiWebIiProjetoFinal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marlon Prado - WINDOWS - GITHUB DESKTOP",
+            "email": "marlonprado04@gmail.com"
+        }
+    ],
+    "require": {}
+}
