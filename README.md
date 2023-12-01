@@ -43,4 +43,4 @@ Variáveis de ambiente:
 - Usuário: root
 - Senha: (em branco)
 
-> As variáveis podem ser modificadas arquivos `Config.php` na pasta raiz do projeto
+> As variáveis podem ser modificadas no arquivo `Config.php` na pasta raiz do projeto
