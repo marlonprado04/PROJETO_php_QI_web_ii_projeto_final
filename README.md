@@ -51,9 +51,9 @@ Variáveis de ambiente:
 
 Para utilizar o programa seguir os passos abaixo:
 
-1. Ter o XAMPP instalado e configurado
+1. Ter o XAMPP e o MySQL instalados e configurados
 2. Adicionar o projeto na pasta `htdocs` dentro do XAMPP
-3. Configurar as variáveis de acesso ao banco dentro do arquivo `Config.php` na raiz do projeto, de acordo com as configurações do MySQL Workbench ou MySQL Admin (XAMPP)
+3. Configurar as variáveis de acesso ao banco dentro do arquivo `Config.php` na raiz do projeto, de acordo com as configurações de portas do MySQL Workbench ou MySQL Admin (dentro do XAMPP)
 4. Utilizar o script de criação de banco contido na pasta `.docs` para criar a estrutura inicial do banco de dados
 5. Utilizar o script de adição de valores ao banco contido na pasta `.docs` 
 6. Acessar o localhost na porta configurada no XAMPP e acessar a pasta do projeto
