@@ -1,7 +1,7 @@
 <?php
 
 // Definindo namespace
-namespace Marlon\QiWebIiProjetoFinal\model;
+namespace Marlon\QiWebIiProjetoFinal\Model;
 
 class Comanda
 {

@@ -1,9 +1,9 @@
 <?php
 
 // Definindo namespace
-namespace Marlon\QiWebIiProjetoFinal\controller;
+namespace Marlon\QiWebIiProjetoFinal\Controller;
 
-use Marlon\QiWebIiProjetoFinal\model\repository\ItemRepository;
+use Marlon\QiWebIiProjetoFinal\Model\Repository\ItemRepository;
 
 // Importando autoload
 require_once dirname(dirname(__DIR__)) . "/vendor/autoload.php";
@@ -21,7 +21,7 @@ switch ($_GET["operation"]) {
   default:
     // Por padrão, redireciona para a tela de mensagem dizendo que a operação é inválida através da variável de sessão
     $_SESSION["msg_error"] = "Operação inválida!!!";
-    header("location:../view/message.php");
+    header("location:../View/message.php");
     exit;
 }
 
@@ -35,7 +35,7 @@ function listAll()
   $_SESSION["list_of_itens"] = $item_repository->listAll();
 
   // Redireciona para o cardápio
-  header("location:../view/cardapio.php");
+  header("location:../View/cardapio.php");
 }
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 // Definindo namespace
-namespace Marlon\QiWebIiProjetoFinal\model\repository;
+namespace Marlon\QiWebIiProjetoFinal\Model\Repository;
 
 use PDO;
 
