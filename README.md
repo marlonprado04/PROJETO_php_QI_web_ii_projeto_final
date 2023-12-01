@@ -32,11 +32,15 @@ Script para criação de elementos dentro do banco de dados [neste link](.docs/v
 
 ## Informações do ambiente
 
-Versões dos programas
+Versões dos programas:
 
 - Xampp: 8.2.12
 - MySQL Workbench: 8.0.34
 
-Porta utilizada no MySQL: 3306
-Usuário: root
-Senha: (em branco)
+Variáveis de ambiente:
+
+- Porta utilizada no MySQL: 3306
+- Usuário: root
+- Senha: (em branco)
+
+> As variáveis podem ser modificadas arquivos `Config.php` na pasta raiz do projeto
