@@ -18,7 +18,7 @@ class Item {
     }
 
     // Métodos Getters e Setters
-    public function _getId() {
+    public function __getId() {
         return $this->id;
     }
     
