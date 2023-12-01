@@ -5,6 +5,10 @@ namespace Marlon\QiWebIiProjetoFinal\model\repository;
 
 use PDO;
 
+// Incluindo arquivo de configuração de banco (com constantes para acesso)
+require_once dirname(__DIR__, 2) . "/Config.php";
+
+
 // Definindo nome da classe
 class Connection
 {
