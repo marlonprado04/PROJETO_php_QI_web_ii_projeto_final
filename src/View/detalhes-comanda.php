@@ -10,15 +10,7 @@
 
 <body>
 
-    <header>
-        <ol>
-            <li> <a href="../../index.php">Index</a></li>
-            <li> <a href="cardapio.php">Cardapio</a></li>
-            <li> <a href="cadastroComanda.php">Cadastro Comanda</a></li>
-            <li> <a href="detalhesItem.php">Detalhes Item</a></li>
-            <li> <a href="#">Detalhes Comanda</a></li>
-        </ol>
-    </header>
+
 
     <div class="foto">
         <img src="./src/img/logo.png" alt="">

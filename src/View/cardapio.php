@@ -11,15 +11,6 @@
 
 <body>
 
-  <header>
-    <ol>
-      <li> <a href="../../index.php">Index</a></li>
-      <li> <a href="#">Cardapio</a></li>
-      <li> <a href="cadastroComanda.php">Cadastro Comanda</a></li>
-      <li> <a href="cardapio.php">Detalhes Item</a></li>
-      <li> <a href="detalhesComanda.php">Detalhes Comanda</a></li>
-    </ol>
-  </header>
 
   <div class="container">
     <h1>POA-BURGUER: Explorando Sabores Exclusivos em Cada Mordida</h1>

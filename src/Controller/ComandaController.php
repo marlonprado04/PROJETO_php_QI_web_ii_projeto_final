@@ -2,6 +2,7 @@
 
 // Definindo namespace
 namespace Marlon\QiWebIiProjetoFinal\Controller;
+use Marlon\QiWebIiProjetoFinal\Model\Repository\ComandaRepository;
 
 // Importando autoload
 require_once dirname(__DIR__, 2) ."/vendor/autoload.php";
@@ -27,6 +28,11 @@ switch ($_GET["operation"]) {
 
 // Criando função add para redirecionar para o repository da comanda
 function add(){
+
+  // Instanciando a ComandaRepository
+  $comanda_repository = new ComandaRepository;
+
+  // Criando
 }
 
 ?>
