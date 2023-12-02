@@ -27,7 +27,7 @@ VALUES
     ('INDEPENDENCIA', 15.90, 'Pao Com Gergelin Grelhado, Hamburguer De Costela, Bacon, Alface, Queijo Mussarela e Maionese.', 'https://catracalivre.com.br/wp-content/uploads/2023/05/dia-do-hamburguer-13-lugares-descolados-em-sp-910x607.jpg'),
     
 
-   ('MOINHOS DE VENTO',40.80, 'Pao Brioche, Hamburguer De Picanha, Queijo Cheddar, Bacon, Tomate, Alface e Maionese.', 'img:https://vivariomarrecife.com.br/wp-content/uploads/2021/05/La%C3%A7a-Burger-cortada.jpg'),
+   ('MOINHOS DE VENTO',40.80, 'Pao Brioche, Hamburguer De Picanha, Queijo Cheddar, Bacon, Tomate, Alface e Maionese.', 'https://vivariomarrecife.com.br/wp-content/uploads/2021/05/La%C3%A7a-Burger-cortada.jpg'),
 
 
    ('CENTRO HISTORICO',27.90, 'Pao Com Gergelin, Hamburguer Empanado Bovino, Maionese, Queijo cheddar, Tomate e Alface.', 'https://cdn.casaeculinaria.com/wp-content/uploads/2023/04/05163949/Hamburguer-artesanal.webp');

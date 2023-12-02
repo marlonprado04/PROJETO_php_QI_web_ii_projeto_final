@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS item (
     nome VARCHAR(255),
     preco DOUBLE,
     descricao VARCHAR(255),
-    imagem VARCHAR(255),
+    imagem TEXT,
     id_item_comanda INT
 );
 
