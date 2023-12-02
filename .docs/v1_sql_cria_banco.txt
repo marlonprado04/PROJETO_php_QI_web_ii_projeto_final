@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS item (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
     preco DOUBLE,
-    descricao VARCHAR(255),
+    descricao TEXT,
     imagem TEXT,
     id_item_comanda INT
 );
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS item_comanda (
     id_comanda INT,
     quantidade INT,
     preco_total INT,
-    observacao VARCHAR(255),
+    observacao TEXT,
     FOREIGN KEY (id_item) REFERENCES item(id),
     FOREIGN KEY (id_comanda) REFERENCES comanda(id)
 );
