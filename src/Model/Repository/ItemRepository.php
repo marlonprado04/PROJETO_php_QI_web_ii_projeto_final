@@ -6,6 +6,9 @@ namespace Marlon\QiWebIiProjetoFinal\Model\Repository;
 // Importando a classe PDO
 use PDO;
 
+// Adicionando o autoload
+require_once dirname(__DIR__, 3) . "/vendor/autoload.php";
+
 // Definindo classe ItemRepository
 class ItemRepository
 {
