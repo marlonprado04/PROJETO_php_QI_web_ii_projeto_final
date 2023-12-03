@@ -20,7 +20,7 @@ switch ($_GET["operation"]) {
     break;
   default:
     // Por padrão, redireciona para a tela de mensagem dizendo que a operação é inválida através da variável de sessão
-    $_SESSION["msg_error"] = "Operação inválida!!!";
+    $_SESSION["msg_error"] = "Operação inválida no Item!!!";
     header("location:../View/message.php");
     exit;
 }

@@ -19,7 +19,7 @@ switch ($_GET["operation"]) {
   //Operação padrão, caso não receba uma pensada inicialmente
   default:
     // Armazena na variável de sessão "msg_error" a mensagem de operação inválida
-    $_SESSION["msg_error"] = "Erro. Esta operação é inválida";
+    $_SESSION["msg_error"] = "Operação inválida na Comanda!!";
     // Redireciona a aplicação para a view de mensagens
     header("location:../View/message.php");
     // Saindo da classe controller

@@ -11,12 +11,12 @@ body {
     flex-direction: column;
 }
 
-main label {
+form label {
     display: block;
 
 }
 
-main input {
+form input {
     border: 2px solid #101111;
     border-radius: 5px;
     padding: 10px;
@@ -24,7 +24,7 @@ main input {
     width: 100%;
 }
 
-main {
+form {
     background-color: #101111;
     width: 500px;
     height: 500px;
@@ -36,7 +36,7 @@ main {
     gap: 5px;
 }
 
-main .botao {
+form .botao {
     padding: 10px;
     background-color: orange;
     color: #fff;
