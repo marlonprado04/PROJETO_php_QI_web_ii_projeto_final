@@ -44,10 +44,14 @@ form .botao {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 .logo-comanda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
     width: 15em;
     margin: 0;
 }

@@ -19,10 +19,12 @@
 <body>
 
     <main>
+        
+        <form action="../Controller/ComandaController.php" method="POST" class="info">
+          
         <img class="logo-comanda" src="./src/img/logo.png" alt="">
 
-        <form action="../Controller/ComandaController.php" method="POST" class="info">
-            <div class="numero-comanda">
+              <div class="numero-comanda">
                 <label for="Número da comanda">Número da comanda</label>
                 <input type="number" name="numero_comanda" id="numero_comanda" placeholder="Digite a sua comanda">
             </div>
