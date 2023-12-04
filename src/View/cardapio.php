@@ -49,7 +49,9 @@
           <p>R$
             <?= $item["preco"] ?>
           </p>
-          <button>DETALHES</button>
+          <button>DETALHES</button> 
+          
+          <button>ADICIONAR</button>
         </div>
         <?php
       endforeach;
