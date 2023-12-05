@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/cadastroComanda.css">
+    <link rel="stylesheet" href="./src/css/cadastr-comanda.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,12 +19,12 @@
 <body>
 
     <main>
-        
-        <form action="../Controller/ComandaController.php" method="POST" class="info">
-          
-        <img class="logo-comanda" src="./src/img/logo.png" alt="">
 
-              <div class="numero-comanda">
+        <form action="../Controller/ComandaController.php" method="POST" class="info">
+
+            <img class="logo-comanda" src="./src/img/logo.png" alt="">
+
+            <div class="numero-comanda">
                 <label for="Número da comanda">Número da comanda</label>
                 <input type="number" name="numero_comanda" id="numero_comanda" placeholder="Digite a sua comanda">
             </div>

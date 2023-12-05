@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>detalhes item</title>
   <link rel="stylesheet" href="./src/css/reset.css">
-  <link rel="stylesheet" href="./src/css/detalhesItem.css">
+  <link rel="stylesheet" href="./src/css/detalhes-item.css">
 
 </head>
 

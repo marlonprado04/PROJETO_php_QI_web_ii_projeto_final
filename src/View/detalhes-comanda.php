@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes da Comanda</title>
-    <link rel="stylesheet" href="./src/css/detalhesComanda.css">
+    <link rel="stylesheet" href="./src/css/detalhes-comanda.css">
 </head>
 
 <body>
