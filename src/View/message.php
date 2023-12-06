@@ -43,9 +43,6 @@
       <p>
         <?= $_SESSION["msg_success"] ?>
       </p>
-      <p>
-        <?= $_SESSION["numero_comanda"] ?>
-      </p>
     </div>
     <?php
     // Depois "destrói" a variável armazenada na sessão
