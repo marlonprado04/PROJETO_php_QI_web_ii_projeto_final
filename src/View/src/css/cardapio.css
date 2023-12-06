@@ -45,7 +45,7 @@ h3 {
 
 p {
   margin: 8px 0;
-  color: #a39c9c;
+  color:black;
   font-weight: bold;
 }
 
@@ -83,7 +83,7 @@ button {
 .orange-background {
   background-color: #ffA500;
   /* Cor de fundo laranja */
-  color: white;
+  color:black;
   /* Cor do texto branco para melhor legibilidade */
 }
 

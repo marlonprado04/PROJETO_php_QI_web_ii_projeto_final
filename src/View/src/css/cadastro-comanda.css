@@ -13,11 +13,10 @@ body {
 
 form label {
     display: block;
-
 }
 
 form input {
-    border: 2px solid #101111;
+    border: 2px solid #101110;
     border-radius: 5px;
     padding: 10px;
     outline: none;
@@ -26,7 +25,7 @@ form input {
 
 form {
     background-color: #101111;
-    width: 500px;
+    width: 185px;
     height: 500px;
     display: flex;
     align-items: center;
@@ -44,14 +43,13 @@ form .botao {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    width: 50%;
+    width: 100%;
 }
 
 .logo-comanda {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
     width: 15em;
     margin: 0;
 }
