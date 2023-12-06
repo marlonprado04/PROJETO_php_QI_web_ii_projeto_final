@@ -3,39 +3,36 @@
 // Definindo namespace
 namespace Marlon\QiWebIiProjetoFinal\Controller;
 
-use Exception;
-use Marlon\QiWebIiProjetoFinal\Model\Comanda;
+use Marlon\QiWebIiProjetoFinal\Model\ItemComanda;
 use Marlon\QiWebIiProjetoFinal\Model\Repository\ComandaRepository;
 
 // Importando autoload
-require_once dirname(__DIR__, 2) . "/vendor/autoload.php";
+require_once dirname(dirname(__DIR__)) . "/vendor/autoload.php";
 
 // Iniciando sessão
 session_start();
 
-// Switch para selecionar operação passada via GET
+// Selecionando parâmetro passado via GET dos menus
 switch ($_GET["operation"]) {
-  // No caso do parâmetro ser addComanda
-  case "addComanda":
-    addComanda();
+  // No caso da operação passada ser "addItem"
+  case "addItem":
+    // Executa método "addItem"
+    addItem();
     break;
-  //Operação padrão, caso não receba uma pensada inicialmente
   default:
-    // Armazena na variável de sessão "msg_error" a mensagem de operação inválida
-    $_SESSION["msg_error"] = "Operação inválida na Comanda!!";
-    // Redireciona a aplicação para a view de mensagens
+    // Por padrão, redireciona para a tela de mensagem dizendo que a operação é inválida através da variável de sessão
+    $_SESSION["msg_error"] = "Operação inválida no ItemComandaController!!!";
     header("location:../View/message.php");
-    // Saindo da classe controller
     exit;
 }
 
-// Criando função add para redirecionar para o repository da comanda
-function addComanda()
+// Função para adicionar item na comanda
+function addItem()
 {
   // Verificando se o método POST está vazio
-  if (empty($_POST)) {
+  if (empty($_POST) || !isset($_SESSION["numero_comanda"])) {
     // Se estiver vazio armazena mensagem de erro e redireciona para tela de mensagem
-    $_SESSION["msg_error"] = "Erro no método addcomanda da comandaController!";
+    $_SESSION["msg_error"] = "Erro no método addItem da ItemComandaController!";
     // Redirecionando para tela de mensagem
     header("location:../View/message.php");
     // Encerra essa classe
@@ -43,8 +40,8 @@ function addComanda()
   }
 
   // Validando os dados passados pelo POST através do formulário
-  // Instanciando a classe Comanda com o número da comanda passado
-  $comanda = new Comanda($_POST["numero_comanda"]);
+  // Instanciando a classe ItemComanda com os valores passados
+  $item_comanda = new ItemComanda();
 
   // Tentando...
   try {
