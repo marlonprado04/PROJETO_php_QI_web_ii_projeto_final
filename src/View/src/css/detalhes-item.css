@@ -7,7 +7,10 @@
   background-position: auto;
   width: 500px;
   height: 700px;
-  margin: auto;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
   border-color: aliceblue;
   border-style: solid;
   border-radius: 5px;
