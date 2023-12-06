@@ -49,7 +49,7 @@ p {
   font-weight: bold;
 }
 
-button {
+.button {
   background-color: #4caf50;
   color: #fff;
   border: none;
@@ -63,11 +63,11 @@ button {
   transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+.button:hover {
   background-color: #45a049;
 }
 
-button {
+.button {
   background-color: black;
   color: white;
   border: none;

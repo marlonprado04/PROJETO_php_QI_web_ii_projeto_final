@@ -49,9 +49,10 @@
           <p>R$
             <?= $item["preco"] ?>
           </p>
-          <button>DETALHES</button> 
+          <!-- Botão para redirecionar para controller que redireciona para os detalhes de acordo com o ID do item -->
+          <a class="button" href="../Controller/ItemController.php?operation=showDetails&id=<?= $item["id"] ?>">DETALHES</a> 
           
-          <button>ADICIONAR</button>
+          <a class="button">ADICIONAR</a>
         </div>
         <?php
       endforeach;

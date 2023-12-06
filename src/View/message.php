@@ -34,6 +34,24 @@
 
 
   <?php
+  // Se variável de sessão "msg_warning" não estiver vazia, 
+  if (!empty($_SESSION["msg_warning"])):
+    ?>
+
+    <!-- Imprime um parágrafo com a mensagem armazenada na sessão-->
+    <div>
+      <p>
+        <?= $_SESSION["msg_warning"]; ?>
+      </p>
+    </div>
+
+    <!-- Depois "destroi" a variável armazenada na sessão -->
+    <?php
+    unset($_SESSION["msg_warning"]);
+  endif;
+  ?>
+
+  <?php
 
   // Se variável de sessão "msg_sucess"" não estiver vazia
   if (!empty($_SESSION["msg_success"])):

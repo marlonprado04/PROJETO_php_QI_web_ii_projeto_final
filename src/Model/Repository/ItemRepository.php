@@ -23,12 +23,26 @@ class ItemRepository
   }
 
 
-   // Função para buscar todos os itens na base de dados
-  public function listAll(){
+  // Função para buscar todos os itens na base de dados
+  public function listAll()
+  {
     // Cria uma variável para armazenar a busca dentro do banco
     $stmt = $this->connection->query("select * from item;");
 
     // Retornando uma array associativo, ou seja, lista de elementos do banco de dados
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  // Função para buscar os detalhes do item com base no id passado
+  public function showDetails($id)
+  {
+    // Criando variável para armazenar busca do banco
+    $stmt = $this->connection->query("select * from item where id=$id;");
+
+    // Passando o parâmetro através do método bindParam
+    // $stmt->bindParam(1, $id, PDO::PARAM_INT);
+
+    // Retornando um array associativo a partir da execução da query 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 }

@@ -7,10 +7,10 @@
   background-position: auto;
   width: 500px;
   height: 700px;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-color: aliceblue;
   border-style: solid;
   border-radius: 5px;
@@ -28,18 +28,20 @@
   max-width: 100%;
 }
 
-.item_retorna {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+.item_return,
 .item_adds {
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+
+.item_adds:hover,
+.item_return:hover {
+  background-color: #45a049;
 }
 
 .label_obs {
@@ -47,7 +49,7 @@
 }
 
 body {
-  background-color:rgb(236, 85, 15);
+  background-color: rgb(236, 85, 15);
   color: white;
 }
 

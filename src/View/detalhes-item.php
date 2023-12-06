@@ -8,22 +8,68 @@
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/detalhes-item.css">
 
+  <!-- Script para atualizar o valor de acordo com o clique -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var reduceButton = document.querySelector('.item_reduc');
+      var quantityButton = document.querySelector('.item_quantity');
+      var sumButton = document.querySelector('.item_sum');
+      var form = document.getElementById('itemForm'); // Adicione um id ao formulário
+
+      reduceButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o envio do formulário
+        updateQuantity(-1);
+      });
+
+      sumButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o envio do formulário
+        updateQuantity(1);
+      });
+
+      function updateQuantity(change) {
+        var currentQuantity = parseInt(quantityButton.textContent);
+        var newQuantity = currentQuantity + change;
+        newQuantity = Math.max(newQuantity, 1);
+        quantityButton.textContent = newQuantity;
+      }
+
+      // Adiciona um manipulador de evento ao formulário para tratar o envio
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impede o envio do formulário
+        // Adicione aqui o código para lidar com o envio do formulário, se necessário
+      });
+    });
+  </script>
+  </script>
 </head>
 
 <body>
 
-
   <div class="container">
-    <form action="#">
+
+    <?php
+    use Marlon\QiWebIiProjetoFinal\model\Item;
+
+    session_start();
+
+    if (isset($_SESSION["details_of_item"]) && is_array($_SESSION["details_of_item"])):
+      $details_of_item = $_SESSION["details_of_item"];
+      ?>
+
       <div class="div_image">
-        <img class="item_image"
-          src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/M6HASPARCZHYNN4XTUYT7H6PTE.jpg&w=1200">
+        <img class="item_image" src="<?= $details_of_item["imagem"] ?>">
       </div>
 
       <div class="conteudo">
-        <h3 class="item_name">PETRÓPOLIS</h3>
-        <p class="item_description">Pão,Tomate,Alface,Queijo Cheddar,Carne Bovina E Maionese. </p>
-        <p class="item_price "> R$ 27,90 </p>
+        <h3 class="item_name">
+          <?= $details_of_item["nome"] ?>
+        </h3>
+        <p class="item_description">
+          <?= $details_of_item["descricao"] ?>
+        </p>
+        <p class="item_price "> R$
+          <?= $details_of_item["preco"] ?>
+        </p>
 
         <div class="botoes">
           <button class="item_reduc">-</button>
@@ -33,14 +79,18 @@
 
         <textarea class="descricao" class aria-placeholder="area_obs" placeholder="observações"></textarea>
 
-        <button class="item_retorna">VOLTAR</button>
-        <button class="item_adds">ADICIONAR</button>
-
+        <a class="item_return" href="#">VOLTAR</a>
+        <a class="item_adds" href="#">ADICIONAR</a>
       </div>
-    </form>
+
+    <?php else: ?>
+      <div>
+        <p>Nenhum item localizado com o ID passado!</p>
+      </div>
+    <?php endif; ?>
+
   </div>
-  </div>
-  </div>
+
 </body>
 
 </html>
