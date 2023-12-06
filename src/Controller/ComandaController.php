@@ -16,8 +16,8 @@ session_start();
 // Switch para selecionar operação passada via GET
 switch ($_GET["operation"]) {
   // No caso do parâmetro ser add
-  case "add":
-    add();
+  case "addComanda":
+    addComanda();
     break;
   //Operação padrão, caso não receba uma pensada inicialmente
   default:
@@ -30,7 +30,7 @@ switch ($_GET["operation"]) {
 }
 
 // Criando função add para redirecionar para o repository da comanda
-function add()
+function addComanda()
 {
   // Verificando se o método POST está vazio
   if (empty($_POST)) {
@@ -52,7 +52,7 @@ function add()
     $comanda_repository = new ComandaRepository();
 
     // Armazena o resultado da chamada do método de adicionar comanda no repositorio
-    $result = $comanda_repository->add($comanda);
+    $result = $comanda_repository->addComanda($comanda);
 
     // Verifica se resultado der positivo
     if ($result) {

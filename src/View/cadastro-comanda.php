@@ -20,7 +20,7 @@
 
     <main>
 
-        <form action="../Controller/ComandaController.php?operation=add" method="POST" class="info">
+        <form action="../Controller/ComandaController.php?operation=addComanda" method="POST" class="info">
 
             <img class="logo-comanda" src="./src/img/logo.png" alt="">
 

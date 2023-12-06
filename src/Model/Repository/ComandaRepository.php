@@ -31,7 +31,7 @@ class ComandaRepository
   // Função para adicionar comanda no banco de dados
 
   
-  public function add($comanda)
+  public function addComanda($comanda)
   {
     // Criando variável para armazenar o estado da conexão e instrução SQL (statemant)
     $stmt = $this->connection->prepare("INSERT INTO comanda (numero_comanda) VALUES (?);");
