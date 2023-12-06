@@ -14,6 +14,11 @@
 
   <div class="container">
     <h1>POA-BURGUER: Explorando Sabores Exclusivos em Cada Mordida</h1>
+ 
+    <button class=b1>Cardapio</button>
+    <button class=b1>Cadastrar comanda</button>
+    <button class=b1>Detalhes item</button>
+    <button class=b1>Detalhes comanda</button>
 
     <main>
 
@@ -60,6 +65,9 @@
       ?>
 
     </main>
+
+    <button class=b2>Detalhes-comanda</button>
+
   </div>
 
 </body>
