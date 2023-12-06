@@ -79,7 +79,7 @@
 
         <textarea class="descricao" class aria-placeholder="area_obs" placeholder="observações"></textarea>
 
-        <a class="item_return" href="#">VOLTAR</a>
+        <a class="item_return" href="../Controller/ItemController.php?operation=listAll">VOLTAR</a>
         <a class="item_adds" href="#">ADICIONAR</a>
       </div>
 
