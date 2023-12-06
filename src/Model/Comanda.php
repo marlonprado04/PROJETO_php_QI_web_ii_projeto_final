@@ -9,27 +9,20 @@ class Comanda
   private $id;
   private $numeroComanda;
 
-  function __construct($id, $numeroComanda)
+  function __construct($numeroComanda)
   {
-    $this->id = $id;
     $this->numeroComanda = $numeroComanda;
   }
 
-  public function __getId()
+  public function __get($attribute)
   {
-    return $this->id;
+    return $this->$attribute;
   }
 
-  public function __getNumeroComanda()
+  public function __set($attribute, $value)
   {
-    return $this->numeroComanda;
+    $this->$attribute = $value;
   }
-
-  public function __setNumeroComanda($numeroComanda)
-  {
-    $this->numeroComanda= $numeroComanda;
-  }
-
 }
 
 ?>

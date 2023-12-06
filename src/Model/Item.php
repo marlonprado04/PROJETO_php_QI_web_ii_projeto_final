@@ -11,8 +11,7 @@ class Item {
     private $imagem;
 
     // Criando construtor
-    public function __construct($id, $nome, $preco) {
-        $this->id = $id;
+    public function __construct($nome, $preco) {
         $this->nome = $nome;
         $this->preco = $preco;
     }
