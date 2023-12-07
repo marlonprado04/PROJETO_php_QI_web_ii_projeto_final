@@ -50,6 +50,7 @@ p {
 }
 
 .button {
+  font-weight: bold;
   background-color: #4caf50;
   color: #fff;
   border: none;
@@ -68,6 +69,7 @@ p {
 }
 
 .button {
+  font-weight: bold;
   background-color: black;
   color: white;
   border: none;
@@ -162,6 +164,7 @@ x h1:hover {
   color: white;
   padding: 10px 10px;
 border-radius: 30px;
+font-weight: bold;
   
 }
 
@@ -174,4 +177,5 @@ text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 5px 2px;
+  font-weight: bold;
 }

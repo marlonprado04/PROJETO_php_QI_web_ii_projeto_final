@@ -50,8 +50,19 @@
 </head>
 
 <body>
+  
+  <button class=b1>Cardapio</button>
 
-  <div class="container">
+  <button class=b1>Cadastrar comanda</button>
+        
+  <button class=b1>Detalhes item</button>
+
+  <button class=b1>Detalhes comanda</button>
+  
+   <div class="container">
+
+
+
 
     <?php
     use Marlon\QiWebIiProjetoFinal\model\Item;

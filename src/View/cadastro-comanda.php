@@ -13,12 +13,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Display:wght@500;700&display=swap"
         rel="stylesheet">
 
+   
+    
+    
     <title>Cadastro de comanda</title>
 </head>
 
 <body>
+    
+    <div class=guia>
 
-    <main>
+  
+    <button class=b1>Cardapio</button>
+<p></p>
+    <button class=b1>Cadastrar comanda</button>
+<p></p>
+    <button class=b1>Detalhes item</button>
+<p></p>
+   <button class=b1>Detalhes comanda</button>
+
+
+    </div>
+
+
+    <main> 
+        
 
         <form action="../Controller/ComandaController.php?operation=addComanda" method="POST" class="info">
 

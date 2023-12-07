@@ -11,6 +11,14 @@
 <body>
 
 
+   <button class=b1>Cardapio</button>
+
+    <button class=b1>Cadastrar comanda</button>
+
+    <button class=b1>Detalhes item</button>
+
+   <button class=b1>Detalhes comanda</button>
+
 
     <div class="foto">
         <img src="./src/img/logo.png" alt="">

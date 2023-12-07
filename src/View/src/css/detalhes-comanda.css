@@ -43,7 +43,29 @@ justify-content:center;
 }
 
 .button1{
+    background-color: black;
+    color: white;
+   border-radius: 20px;
+   font-size: 18px;
+    margin: 5px 2px;
     font-weight: bold;
 }
 
-.button2{ font-weight: bold; }
+.button2{ 
+    background-color: black;
+    color: white;
+   border-radius: 20px;
+   font-size: 18px;
+    margin: 5px 2px;
+    font-weight: bold;
+ }
+
+ .b1{
+display: flex;
+    background-color: black;
+    color: white;
+   border-radius: 20px;
+   font-size: 12px;
+    margin: 5px 2px;
+    font-weight: bold;
+ }

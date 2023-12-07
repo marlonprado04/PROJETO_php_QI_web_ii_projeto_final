@@ -21,6 +21,7 @@ form input {
     padding: 10px;
     outline: none;
     width: 100%;
+    font-weight: bold;
 }
 
 form {
@@ -33,6 +34,7 @@ form {
     flex-direction: column;
     color: rgb(241, 161, 11);
     gap: 5px;
+    font-weight: bold;
 }
 
 form .botao {
@@ -44,6 +46,7 @@ form .botao {
     cursor: pointer;
     margin-top: 10px;
     width: 100%;
+    font-weight: bold;
 }
 
 .logo-comanda {
@@ -52,4 +55,14 @@ form .botao {
     justify-content: center;
     width: 15em;
     margin: 0;
+}
+
+.b1{
+    background-color: orange;
+    color: white;
+    padding: 0px 0px;
+  border-radius: 25px;
+  width: 12em;
+  margin: 3;
+  font-weight: bold;
 }
