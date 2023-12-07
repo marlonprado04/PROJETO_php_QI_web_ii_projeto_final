@@ -5,6 +5,7 @@ namespace Marlon\QiWebIiProjetoFinal\Controller;
 
 use Exception;
 use Marlon\QiWebIiProjetoFinal\Model\Comanda;
+use Marlon\QiWebIiProjetoFinal\Model\ItemComanda;
 use Marlon\QiWebIiProjetoFinal\Model\Repository\ComandaRepository;
 
 // Importando autoload
@@ -103,7 +104,7 @@ function addItem()
   // Verificando se número da comanda NÃO está setado
   else if(!isset($_SESSION["numero_comanda"])){
     // Se variável NÃO foi setada, então redireciona para a tela de cadastro de comanda
-    header("location:../View/cadastro-comanda.php")
+    header("location:../View/cadastro-comanda.php");
     // Encerra operação dessa classe
     exit;
   }
