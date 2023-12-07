@@ -74,7 +74,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  text-align:center;
+  text-align: center;
 }
 
 .item_sum {
@@ -100,16 +100,39 @@ body {
   width: 25px;
 }
 
-.b1{
+.b1 {
   display: flex;
-    background-color: black;
-    color: white;
-   border-radius: 20px;
-   font-size: 16px;
-    margin: 5px 2px;
-    font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 5px 2px;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .guia {
   margin: 40px;
+}
+
+/* Estilo para o input do valor do item no menu */
+.item_price {
+  /* Adicione estilos de caixa para melhorar a aparência */
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+
+  text-align: center;
+
+  /* Adicione estilos de fonte e cor */
+  font-size: 16px;
+  color: #333;
+
+  /* Adicione estilos de foco para indicar interatividade */
+  outline: none;
+
+  
 }

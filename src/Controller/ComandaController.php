@@ -10,13 +10,13 @@ use Marlon\QiWebIiProjetoFinal\Model\Repository\ComandaRepository;
 use Marlon\QiWebIiProjetoFinal\Model\Repository\ItemRepository;
 
 // Importando autoload
-require_once dirname(__DIR__, 2) . "/vendor/autoload.php";
+require_once dirname(__DIR__, 2)."/vendor/autoload.php";
 
 // Iniciando sessão
 session_start();
 
 // Switch para selecionar operação passada via GET
-switch ($_GET["operation"]) {
+switch($_GET["operation"]) {
   // No caso do parâmetro ser addComanda
   case "addComanda":
     addComanda();
@@ -51,10 +51,9 @@ switch ($_GET["operation"]) {
 }
 
 // Criando função add para redirecionar para o repository da comanda
-function addComanda()
-{
+function addComanda() {
   // Verificando se o método POST está vazio
-  if (empty($_POST)) {
+  if(empty($_POST)) {
     // Se estiver vazio armazena mensagem de erro e redireciona para tela de mensagem
     $_SESSION["msg_error"] = "Erro no método addcomanda da ComandaController (POST VAZIO)!";
     // Redirecionando para tela de mensagem
@@ -62,6 +61,8 @@ function addComanda()
     // Encerra essa classe
     exit;
   }
+
+
 
   // Validando os dados passados pelo POST através do formulário
   // Instanciando a classe Comanda com o número da comanda passado
@@ -75,7 +76,7 @@ function addComanda()
     $result = $comanda_repository->addComanda($comanda);
 
     // Verifica se resultado der positivo
-    if ($result) {
+    if($result) {
       // Armazena mensagem de sucesso
       $_SESSION["msg_success"] = "Comanda cadastrada com sucesso!!!";
 
@@ -98,10 +99,9 @@ function addComanda()
 }
 
 // Função para adicionar item na comanda
-function addItem()
-{
+function addItem() {
   // Verificando se o método POST está vazio
-  if (empty($_POST)) {
+  if(empty($_POST)) {
     // Se estiver vazio armazena mensagem de erro e redireciona para tela de mensagem
     $_SESSION["msg_error"] = "Erro no método addItem da ComandaController (POST VAZIO)!";
     // Redirecionando para tela de mensagem
@@ -111,21 +111,26 @@ function addItem()
   }
 
   // Verificando se número da comanda NÃO está setado
-  else if (!isset($_SESSION["numero_comanda"])) {
+  else if(!isset($_SESSION["numero_comanda"])) {
     // Se variável NÃO foi setada, então redireciona para a tela de cadastro de comanda
     header("location:../View/cadastro-comanda.php");
     // Encerra operação dessa classe
     exit;
   }
 
-  // Instanciando a classe ItemComanda com os valores passados
-  $item_comanda = new ItemComanda(
-    $_POST["item_id"],
-    $_SESSION["id_comanda"],
-    intval($_POST["item_quantity"]),
-    intval($_POST["item_quantity"]) * floatval($_POST["item_price"]),
-    $_POST["item_observation"],
-  );
+  echo "<pre>";
+  var_dump($_POST);
+  echo "</pre>";
+  exit;
+
+  // // Instanciando a classe ItemComanda com os valores passados
+  // $item_comanda = new ItemComanda(
+  //   $_POST["item_id"],
+  //   $_SESSION["id_comanda"],
+  //   intval($_POST["item_quantity"]),
+  //   intval($_POST["item_quantity"]) * floatval($_POST["item_price"]),
+  //   $_POST["item_observation"],
+  // );
 
   try {
     // Instanciando ComandaRepository para utilizar suas funções de acesso ao banco
@@ -135,7 +140,7 @@ function addItem()
     $result = $comanda_repository->addItem($item_comanda);
 
     // Verifica se resultado der positivo
-    if ($result) {
+    if($result) {
       // Armazena mensagem de sucesso
       $_SESSION["msg_success"] = "Item cadastrado com sucesso!!!";
     } else {
@@ -153,10 +158,9 @@ function addItem()
 }
 
 // Função para adicionar um único item a partir da tela de cardápio
-function addUniqueItem()
-{
+function addUniqueItem() {
   // Verificando se o id não foi passado via GET
-  if (!isset($_GET["id"])) {
+  if(!isset($_GET["id"])) {
     // Se não tiver sido passado cria uma variável para armazenar a mensagem
     $_SESSION["msg_error"] = "Erro no método addUniqueItem no ComandaController. id do item não informado via GET!!!";
 
@@ -191,7 +195,7 @@ function addUniqueItem()
     $result = $comanda_repository->addItem($item_comanda);
 
     // Verifica se resultado der positivo
-    if ($result) {
+    if($result) {
       // Armazena mensagem de sucesso
       $_SESSION["msg_success"] = "Item cadastrado com sucesso!!!";
     } else {
@@ -209,8 +213,7 @@ function addUniqueItem()
 
 }
 
-function listItems()
-{
+function listItems() {
 
 }
 

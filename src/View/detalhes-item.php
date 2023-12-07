@@ -86,7 +86,7 @@
             <?= $_SESSION["details_of_item"]["nome"] ?>
           </h3>
           <p class="item_description"><?= $_SESSION["details_of_item"]["descricao"] ?></p>
-          <p class="item_price "><?= $_SESSION["details_of_item"]["preco"] ?></p>
+          <input readonly name="item_price" class="item_price" value="<?= $_SESSION["details_of_item"]["preco"] ?>" ></input>
 
           <input type="hidden" name="item_id" value="<?= $_SESSION["details_of_item"]["id"] ?>">
 
