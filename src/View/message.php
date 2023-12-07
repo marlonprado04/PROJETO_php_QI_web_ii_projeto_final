@@ -59,26 +59,6 @@
   // Se variável de sessão "msg_sucess"" não estiver vazia
   if (!empty($_SESSION["msg_success"])):
     ?>
-    <!-- Imprime um parágrafo com a mensagem armazenada na sessão -->
-    <div>
-      <p>
-        <?= $_SESSION["msg_success"] ?>
-      </p>
-
-      <p>Observacao:
-        <?= $_SESSION["item_observation"]  ?>
-      </p>
-      <p>Preço:
-        <?= $_SESSION["item_price"]  ?>
-      </p>
-      <p>Quantidade:
-        <?=  $_SESSION["item_quantity"] ?>
-      </p>
-      <p>ID:
-        <?= $_SESSION["item_id"] ?>
-      </p>
-
-    </div>
     <?php
     // Depois "destrói" a variável armazenada na sessão
     unset($_SESSION["msg_success"]);
