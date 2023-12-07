@@ -50,14 +50,16 @@
 </head>
 
 <body>
-  
-  <button class=b1>Cardapio</button>
+  <div class="guia">
+   <button class=b1>Cardapio</button>
 
   <button class=b1>Cadastrar comanda</button>
         
   <button class=b1>Detalhes item</button>
 
   <button class=b1>Detalhes comanda</button>
+</div>
+ 
   
    <div class="container">
 

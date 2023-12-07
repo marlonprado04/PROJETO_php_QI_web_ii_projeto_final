@@ -51,6 +51,11 @@ justify-content:center;
     font-weight: bold;
 }
 
+.guia{
+background-color: antiquewhite;
+margin: 100em;
+}
+
 .button2{ 
     background-color: black;
     color: white;
