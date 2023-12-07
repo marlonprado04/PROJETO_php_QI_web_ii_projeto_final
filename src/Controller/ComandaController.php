@@ -42,6 +42,12 @@ function addComanda()
     exit;
   }
 
+// Verificando se variável com detalhes do item foi setada
+else if(isset($_SESSION["details_of_item"])){
+  // Se variável foi setada, então chama um método que tanto adiciona comanda quanto item nessa comanda adicionada
+  
+}
+
   // Validando os dados passados pelo POST através do formulário
   // Instanciando a classe Comanda com o número da comanda passado
   $comanda = new Comanda($_POST["numero_comanda"]);
