@@ -27,6 +27,12 @@ switch ($_GET["operation"]) {
     addItem();
     break;
 
+  // No caso da operação passada ser "addItem"
+  case "listItems":
+    // Executa método "addItem"
+    listItems();
+    break;
+
   //Operação padrão, caso não receba uma pensada inicialmente
   default:
     // Armazena na variável de sessão "msg_error" a mensagem de operação inválida
@@ -74,14 +80,10 @@ function addComanda()
       // Se não, armazena mensagem de atenção
       $_SESSION["msg_warning"] = "Lamento, não foi possível registrar a comanda!!!";
     }
-  }
-
-  catch (Exception $e) {
+  } catch (Exception $e) {
     // Armazena mensagem de erro na sessão 
     $_SESSION["msg_error"] = "Ops, houve um erro insperado em nossa base de dados!!!";
-  }
-
-  finally {
+  } finally {
     // Redireciona para a tela de mensagem
     header("location:../View/message.php");
     exit;
@@ -99,10 +101,10 @@ function addItem()
     header("location:../View/message.php");
     // Encerra essa classe
     exit;
-  } 
-  
+  }
+
   // Verificando se número da comanda NÃO está setado
-  else if(!isset($_SESSION["numero_comanda"])){
+  else if (!isset($_SESSION["numero_comanda"])) {
     // Se variável NÃO foi setada, então redireciona para a tela de cadastro de comanda
     header("location:../View/cadastro-comanda.php");
     // Encerra operação dessa classe
@@ -133,18 +135,18 @@ function addItem()
       // Se não, armazena mensagem de atenção
       $_SESSION["msg_warning"] = "Lamento, não foi possível registrar a comanda!!!";
     }
-  }
-
-  catch (Exception $e) {
+  } catch (Exception $e) {
     // Armazena mensagem de erro na sessão 
     $_SESSION["msg_error"] = "Ops, houve um erro insperado em nossa base de dados!!!";
-  }
-
-  finally {
+  } finally {
     // Redireciona para a tela de mensagem
     header("location:../View/message.php");
     exit;
   }
+}
+
+function listItems(){
+
 }
 
 ?>

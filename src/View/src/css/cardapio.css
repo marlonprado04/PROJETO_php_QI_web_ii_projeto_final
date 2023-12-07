@@ -45,23 +45,8 @@ h3 {
 
 p {
   margin: 8px 0;
-  color:black;
+  color: black;
   font-weight: bold;
-}
-
-.button {
-  font-weight: bold;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .button:hover {
@@ -80,12 +65,15 @@ p {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+
 }
 
 .orange-background {
   background-color: #ffA500;
   /* Cor de fundo laranja */
-  color:black;
+  color: black;
   /* Cor do texto branco para melhor legibilidade */
 }
 
@@ -94,7 +82,7 @@ p {
   /* Cor de fundo laranja para .item_container */
   padding: 10px;
   flex: 1;
-  display:flex ;
+  display: flex;
   height: 325px;
   min-height: 200px;
   /* Ajuste o preenchimento conforme necessário */
@@ -148,10 +136,6 @@ h1 {
   /* Adiciona transição suave ao brilho */
 }
 
-x h1:hover {
-  background-position: 0 0;
-}
-
 .item_container {
   display: inline-block;
   margin: 10px;
@@ -159,23 +143,25 @@ x h1:hover {
   vertical-align: top;
 }
 
-.b1{
+.b1 {
   background-color: black;
   color: white;
   padding: 10px 10px;
-border-radius: 30px;
-font-weight: bold;
-  
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.b2{
+.b2 {
   background-color: black;
   color: white;
   padding: 20px 25px;
-border-radius: 20px;
-text-decoration: none;
+  border-radius: 20px;
+  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 5px 2px;
   font-weight: bold;
+  cursor: pointer;
 }
