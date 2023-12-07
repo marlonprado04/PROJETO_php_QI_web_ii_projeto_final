@@ -38,10 +38,11 @@ function addItem()
     // Encerra essa classe
     exit;
   }
+
 // Verificando se a variável de sessão com número da comanda NÃO está setada
 else if(!isset($_SESSION["numero_comanda"])){
-  // Se não estiver, redireciona para o comanda controller e passa a operação para cadastrar comanda e item no processo)
-  header("location:./ComandaController.php?operation=addCamandaComItem")
+  // Se não estiver, redireciona para a tela de cadastro de comanda
+  header("location:../View/cadastro-comanda.php")
 }
 
 
