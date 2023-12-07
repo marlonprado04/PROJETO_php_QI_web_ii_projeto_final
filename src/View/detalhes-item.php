@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/detalhes-item.css">
 
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var reduceButton = document.querySelector('.item_reduc');
@@ -69,36 +68,36 @@
     <?php
     use Marlon\QiWebIiProjetoFinal\model\Item;
 
+    // Iniciando uma sessão para fazer uso das variáveis
     session_start();
 
+    // Verificando se variável de sessao "details of item" está setada e se é um array associativo criado pelo banco
     if (isset($_SESSION["details_of_item"]) && is_array($_SESSION["details_of_item"])):
-      $details_of_item = $_SESSION["details_of_item"];
+      // No caso de sim, armazena esse array em uma variável
       ?>
 
-      <form method="POST" action="../Controller/ItemComandaController.php?operation=addItem">
+      <form method="POST" action="../Controller/ComandaController.php?operation=addItem">
         <div class="div_image">
-          <img class="item_image" src="<?= $details_of_item["imagem"] ?>">
+          <img class="item_image" src="<?= $_SESSION["details_of_item"]["imagem"] ?>">
         </div>
 
         <div class="conteudo">
           <h3 class="item_name">
-            <?= $details_of_item["nome"] ?>
+            <?= $_SESSION["details_of_item"]["nome"] ?>
           </h3>
-          <p class="item_description">
-            <?= $details_of_item["descricao"] ?>
-          </p>
-          <p class="item_price "> R$
-            <?= $details_of_item["preco"] ?>
-          </p>
+          <p class="item_description"><?= $_SESSION["details_of_item"]["descricao"] ?></p>
+          <p class="item_price "><?= $_SESSION["details_of_item"]["preco"] ?></p>
+
+          <input type="hidden" name="item_id" value="<?= $_SESSION["details_of_item"]["id"] ?>">
 
           <div class="botoes">
             <button class="item_reduc">-</button>
-            <input type="text" name="quantidade" class="item_quantity" value="1" oninput="validateNumber(this)" required>
+            <input type="text" name="item_quantity" class="item_quantity" value="1" oninput="validateNumber(this)" required>
             <button class="item_sum">+</button>
           </div>
 
 
-          <textarea class="observacao" placeholder="Observações..." name="observacao"></textarea>
+          <textarea class="observacao" placeholder="Observações..." name="item_observation"></textarea>
 
           <a class="item_return" href="../Controller/ItemController.php?operation=listAll">VOLTAR</a>
           <button type="submit" class="item_adds">ADICIONAR</button>

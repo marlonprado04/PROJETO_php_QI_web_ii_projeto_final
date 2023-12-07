@@ -29,8 +29,6 @@ class ComandaRepository
 
 
   // Função para adicionar comanda no banco de dados
-
-  
   public function addComanda($comanda)
   {
     // Criando variável para armazenar o estado da conexão e instrução SQL (statemant)
@@ -40,8 +38,31 @@ class ComandaRepository
     // e tratando como inteiro através do método estático do PDO
     $stmt->bindParam(1, $comanda->numeroComanda);
 
+    // Armazena o resultado da execução da inserção no banco
+    $result = $stmt->execute();
+
+    // Recuperando o último ID inserido no banco e armazenando no objeto de comanda passado como parâmetro
+    $comanda->id = $this->connection->lastInsertId();
+
     // Retornando o resultado da execução do código acima
-    return $stmt->execute();
+    return $result;
   }
+
+  // Função para adicionar um item na comanda
+  public function addItem($item_comanda)
+  {
+    // Criando variável para armazenar a instrução SQL (statement)
+    $stmt = $this->connection->prepare("INSERT INTO item_comanda (id_item, id_comanda, quantidade, preco_total, observacao) VALUES (?, ?, ?, ?, ?);");
+
+    // Passando os valores do item da comanda através do método bindParam
+    $stmt->bindParam(1, $item_comanda->item_id);
+    $stmt->bindParam(2, $item_comanda->comanda_id);
+    $stmt->bindParam(3, $item_comanda->quantidade);
+    $stmt->bindParam(4, $item_comanda->total);
+    $stmt->bindParam(5, $item_comanda->observacao);
+
+    // Armazena o resultado da execução da inserção no banco
+    return $stmt->execute();
+}
 }
 ?>

@@ -15,16 +15,12 @@
   <div class="container">
     <h1>POA-BURGUER: Explorando Sabores Exclusivos em Cada Mordida</h1>
  
-    <button class=b1>Cardapio</button>
-    <button class=b1>Cadastrar comanda</button>
-    <button class=b1>Detalhes item</button>
-    <button class=b1>Detalhes comanda</button>
+    <a class=b1 href="cadastro-comanda.php">Cadastrar comanda</a>
+    <a class=b1 href="../Controller/ComandaController.php?operation=listItems">Detalhes comanda</a>
 
     <main>
 
       <?php
-
-      use Marlon\QiWebIiProjetoFinal\model\Item;
 
       session_start();
       ?>
@@ -57,7 +53,7 @@
           <!-- Botão para redirecionar para controller que redireciona para os detalhes de acordo com o ID do item -->
           <a class="button" href="../Controller/ItemController.php?operation=showDetails&id=<?= $item["id"] ?>">DETALHES</a> 
           
-          <a class="button" href="../Controller/ItemComandaController.php?operation=addItem&id=<?= $item["id"] ?>">ADICIONAR</a>
+          <a class="button" href="../Controller/ComandaController.php?operation=addUniqueItem&id=<?= $item["id"] ?>">ADICIONAR</a>
         </div>
         <?php
       endforeach;
