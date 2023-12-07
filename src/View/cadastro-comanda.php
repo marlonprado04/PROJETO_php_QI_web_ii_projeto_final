@@ -26,10 +26,6 @@
   
     <button class=b1>Cardapio</button>
 <p></p>
-    <button class=b1>Cadastrar comanda</button>
-<p></p>
-    <button class=b1>Detalhes item</button>
-<p></p>
    <button class=b1>Detalhes comanda</button>
 
 
