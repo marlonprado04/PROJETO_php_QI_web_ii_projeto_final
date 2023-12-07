@@ -53,7 +53,7 @@
           <!-- Botão para redirecionar para controller que redireciona para os detalhes de acordo com o ID do item -->
           <a class="button" href="../Controller/ItemController.php?operation=showDetails&id=<?= $item["id"] ?>">DETALHES</a> 
           
-          <a class="button" href="../Controller/ComandaController.php?operation=addItem">ADICIONAR</a>
+          <a class="button" href="../Controller/ComandaController.php?operation=addUniqueItem&id=<?= $item["id"] ?>">ADICIONAR</a>
         </div>
         <?php
       endforeach;

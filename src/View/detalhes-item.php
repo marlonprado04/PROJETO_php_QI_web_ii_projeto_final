@@ -83,12 +83,8 @@
           <h3 class="item_name">
             <?= $_SESSION["details_of_item"]["nome"] ?>
           </h3>
-          <p class="item_description">
-            <?= $_SESSION["details_of_item"]["descricao"] ?>
-          </p>
-          <p class="item_price "> R$
-            <?= $_SESSION["details_of_item"]["preco"] ?>
-          </p>
+          <p class="item_description"><?= $_SESSION["details_of_item"]["descricao"] ?></p>
+          <p class="item_price "><?= $_SESSION["details_of_item"]["preco"] ?></p>
 
           <input type="hidden" name="item_id" value="<?= $_SESSION["details_of_item"]["id"] ?>">
 

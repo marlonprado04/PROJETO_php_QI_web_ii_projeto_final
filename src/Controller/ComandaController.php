@@ -7,6 +7,7 @@ use Exception;
 use Marlon\QiWebIiProjetoFinal\Model\Comanda;
 use Marlon\QiWebIiProjetoFinal\Model\ItemComanda;
 use Marlon\QiWebIiProjetoFinal\Model\Repository\ComandaRepository;
+use Marlon\QiWebIiProjetoFinal\Model\Repository\ItemRepository;
 
 // Importando autoload
 require_once dirname(__DIR__, 2) . "/vendor/autoload.php";
@@ -31,6 +32,12 @@ switch ($_GET["operation"]) {
   case "listItems":
     // Executa método "addItem"
     listItems();
+    break;
+
+  // No caso da operação passada ser "addItem"
+  case "addUniqueItem":
+    // Executa método "addItem"
+    addUniqueItem();
     break;
 
   //Operação padrão, caso não receba uma pensada inicialmente
@@ -115,8 +122,8 @@ function addItem()
   $item_comanda = new ItemComanda(
     $_POST["item_id"],
     $_SESSION["id_comanda"],
-    $_POST["item_quantity"],
-    $_POST["item_quantity"] * $_POST["item_price"],
+    intval($_POST["item_quantity"]),
+    intval($_POST["item_quantity"]) * floatval($_POST["item_price"]),
     $_POST["item_observation"],
   );
 
@@ -145,7 +152,65 @@ function addItem()
   }
 }
 
-function listItems(){
+// Função para adicionar um único item a partir da tela de cardápio
+function addUniqueItem()
+{
+  // Verificando se o id não foi passado via GET
+  if (!isset($_GET["id"])) {
+    // Se não tiver sido passado cria uma variável para armazenar a mensagem
+    $_SESSION["msg_error"] = "Erro no método addUniqueItem no ComandaController. id do item não informado via GET!!!";
+
+    // Redireciona usuário para a tela de mensagem
+    header("location:../View/message.php");
+
+    // Encerra essa classe
+    exit;
+  }
+
+
+  // Instanciando o repositório do item para extrair valores do banco
+  $item_repository = new ItemRepository();
+
+  // Criando variável para armazenar os detalhes do item
+  $details_of_item = $item_repository->showDetails($_GET["id"]);
+
+  // Instanciando a classe ItemComanda com os valores extraídos do banco
+  $item_comanda = new ItemComanda(
+    $_GET["id"],
+    $_SESSION["id_comanda"],
+    1,
+    1 * $details_of_item[0]["preco"],
+    "",
+  );
+
+  try {
+    // Instanciando ComandaRepository para utilizar suas funções de acesso ao banco
+    $comanda_repository = new ComandaRepository();
+
+    // Armazenando o resultado da chamada do método de adicionar item na comanda, no repositorio
+    $result = $comanda_repository->addItem($item_comanda);
+
+    // Verifica se resultado der positivo
+    if ($result) {
+      // Armazena mensagem de sucesso
+      $_SESSION["msg_success"] = "Item cadastrado com sucesso!!!";
+    } else {
+      // Se não, armazena mensagem de atenção
+      $_SESSION["msg_warning"] = "Lamento, não foi possível registrar a comanda!!!";
+    }
+  } catch (Exception $e) {
+    // Armazena mensagem de erro na sessão 
+    $_SESSION["msg_error"] = "Ops, houve um erro insperado em nossa base de dados!!!";
+  } finally {
+    // Redireciona para a tela de mensagem
+    header("location:../View/message.php");
+    exit;
+  }
+
+}
+
+function listItems()
+{
 
 }
 
