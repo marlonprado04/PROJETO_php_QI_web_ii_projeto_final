@@ -30,7 +30,7 @@ switch ($_GET["operation"]) {
 function addItem()
 {
   // Verificando se o método POST está vazio
-  if (empty($_POST) || !isset($_SESSION["numero_comanda"])) {
+  if (empty($_POST)) {
     // Se estiver vazio armazena mensagem de erro e redireciona para tela de mensagem
     $_SESSION["msg_error"] = "Erro no método addItem da ItemComandaController!";
     // Redirecionando para tela de mensagem
@@ -38,6 +38,12 @@ function addItem()
     // Encerra essa classe
     exit;
   }
+// Verificando se a variável de sessão com número da comanda NÃO está setada
+else if(!isset($_SESSION["numero_comanda"])){
+  // Se não estiver, redireciona para o comanda controller e passa a operação para cadastrar comanda e item no processo)
+  header("location:./ComandaController.php?operation=addCamandaComItem")
+}
+
 
   // Validando os dados passados pelo POST através do formulário
   // Instanciando a classe ItemComanda com os valores passados
