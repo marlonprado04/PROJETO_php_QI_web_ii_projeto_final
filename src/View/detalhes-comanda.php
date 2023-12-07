@@ -15,7 +15,7 @@
 
     <button class=b1>Cadastrar comanda</button>
 
-   <button class=b1>Detalhes comanda</button>
+  
 </div>
    
 
