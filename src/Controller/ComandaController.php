@@ -118,19 +118,17 @@ function addItem() {
     exit;
   }
 
-  echo "<pre>";
-  var_dump($_POST);
-  echo "</pre>";
-  exit;
+  // Instanciando a classe ItemComanda com os valores passados
+  $item_comanda = new ItemComanda(
+    $_POST["item_id"],
+    $_SESSION["id_comanda"],
+    intval($_POST["item_quantity"]),
+    intval($_POST["item_quantity"]) * floatval($_POST["item_price"]),
+    $_POST["item_observation"],
+  );
 
-  // // Instanciando a classe ItemComanda com os valores passados
-  // $item_comanda = new ItemComanda(
-  //   $_POST["item_id"],
-  //   $_SESSION["id_comanda"],
-  //   intval($_POST["item_quantity"]),
-  //   intval($_POST["item_quantity"]) * floatval($_POST["item_price"]),
-  //   $_POST["item_observation"],
-  // );
+
+  
 
   try {
     // Instanciando ComandaRepository para utilizar suas funções de acesso ao banco

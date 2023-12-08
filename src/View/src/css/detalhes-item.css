@@ -118,12 +118,12 @@ body {
 /* Estilo para o input do valor do item no menu */
 .item_price {
   /* Adicione estilos de caixa para melhorar a aparência */
-  width: 30px;
+  width: 80px;
   height: 30px;
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;
-  border-radius: 100%;
+  border-radius: 30px;
 
   text-align: center;
 

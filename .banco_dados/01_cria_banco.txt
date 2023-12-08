@@ -5,26 +5,26 @@ USE poa_burguer;
 -- Criação da tabela 'comanda' se ela não existir
 CREATE TABLE IF NOT EXISTS comanda (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    numero_comanda INT
+    numero_comanda INT NOT NULL
 );
 
 -- Criação da tabela 'item' se ela não existir
 CREATE TABLE IF NOT EXISTS item (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255),
-    preco DOUBLE,
-    descricao TEXT,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    preco DOUBLE NOT NULL,
+    descricao TEXT NOT NULL,
     imagem TEXT,
     id_item_comanda INT
 );
 
 -- Criação da tabela 'item_comanda' se ela não existir
 CREATE TABLE IF NOT EXISTS item_comanda (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_item INT,
-    id_comanda INT,
-    quantidade INT,
-    preco_total INT,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    id_item INT NOT NULL,
+    id_comanda INT NOT NULL,
+    quantidade INT NOT NULL,
+    preco_total DOUBLE NOT NULL,
     observacao TEXT,
     FOREIGN KEY (id_item) REFERENCES item(id),
     FOREIGN KEY (id_comanda) REFERENCES comanda(id)
