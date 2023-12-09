@@ -14,8 +14,10 @@
       <li> <a href="#">Index</a></li>
       <li> <a href="./src/Controller/ItemController.php?operation=listAll">Cardapio</a></li>
       <li> <a href="./src/View/cadastro-comanda.php">Cadastrar comanda</a></li>
-      <li> <a href="./src/view/detalhes-item.php">Detalhes Item</a></li>
-      <li> <a href="./src/view/detalhes-comanda.php">Detalhes Comanda</a></li>
+      <li> <a href="./src/View/detalhes-item.php">Detalhes Item</a></li>
+      <li> <a href="./src/View/detalhes-comanda.php">Detalhes Comanda</a></li>
+      <li> <a href="./src/View/cadastro-item.php">Cadastrar Item</a></li>
+
     </ol>
   </header>
 
