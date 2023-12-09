@@ -50,17 +50,13 @@
 
 <body>
   <div class="guia">
-   <button class=b1>Cardapio</button>
+    <a class="b1" href="../Controller/ItemController.php?operation=listAll">Cardapio</a>
+    <a class="b1" href="./cadastro-comanda.php">Cadastrar comanda</a>
+    <a class="b1" href="../Controller/ComandaController.php?operation=listItems">Detalhes comanda</a>
+  </div>
 
-  <button class=b1>Cadastrar comanda</button>
-        
- 
 
-  <button class=b1>Detalhes comanda</button>
-</div>
- 
-  
-   <div class="container">
+  <div class="container">
 
 
 
@@ -82,14 +78,18 @@
           <h3 class="item_name">
             <?= $_SESSION["details_of_item"]["nome"] ?>
           </h3>
-          <p class="item_description"><?= $_SESSION["details_of_item"]["descricao"] ?></p>
-          <input readonly name="item_price" class="item_price" value="<?= $_SESSION["details_of_item"]["preco"] ?>" ></input>
+          <p class="item_description">
+            <?= $_SESSION["details_of_item"]["descricao"] ?>
+          </p>
+          <input readonly name="item_price" class="item_price"
+            value="<?= $_SESSION["details_of_item"]["preco"] ?>"></input>
 
           <input type="hidden" name="item_id" value="<?= $_SESSION["details_of_item"]["id"] ?>">
 
           <div class="botoes">
             <button class="item_reduc">-</button>
-            <input type="text" name="item_quantity" class="item_quantity" value="1" oninput="validateNumber(this)" required>
+            <input type="text" name="item_quantity" class="item_quantity" value="1" oninput="validateNumber(this)"
+              required>
             <button class="item_sum">+</button>
           </div>
 

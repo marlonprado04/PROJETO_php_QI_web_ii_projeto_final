@@ -101,14 +101,15 @@ body {
 }
 
 .b1 {
-  display: flex;
   background-color: black;
   color: white;
   border-radius: 10px;
   font-size: 16px;
   margin: 5px 2px;
   font-weight: bold;
-  padding: 5px;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .guia {
@@ -134,5 +135,5 @@ body {
   /* Adicione estilos de foco para indicar interatividade */
   outline: none;
 
-  
+
 }
