@@ -10,56 +10,83 @@
 
 <body>
 
- <div class=guia>
-    <button class=b1>Cardapio</button>
-
-    <button class=b1>Cadastrar comanda</button>
-
-  
-</div>
-   
-
+    <div class=guia>
+        <button class=b1>Cardapio</button>
+    </div>
 
     <div class="foto">
         <img src="./src/img/logo.png" alt="">
     </div>
 
+
     <h2 class="titulo">Detalhes da Comanda</h2>
-
-
-
 
     <table>
         <thead>
-
-
             <tr>
-                <th>Item</th>
+                <th>ID</th>
+                <th>Nome</th>
                 <th>Quantidade</th>
-                <th>Preço Unitário</th>
-                <th>Total</th>
+                <th>Preço total</th>
+                <th>Observações</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Item 1</td>
-                <td>2</td>
-                <td>R$ 10,00</td>
-                <td>R$ 20,00</td>
-            </tr>
-            <tr>
-                <td>Item 2</td>
-                <td>1</td>
-                <td>R$ 15,00</td>
-                <td>R$ 15,00</td>
-            </tr>
-            <!-- Adicione mais linhas conforme necessário -->
+            <?php
+
+            session_start();
+
+
+
+            if (empty($_SESSION["items_of_check"])):
+                ?>
+
+                <tr>
+                    <td colspan="5">
+                        <p>Nenhum item cadastrado na comanda ainda!</p>
+                    </td>
+                </tr>
+
+
+                <?php
+            endif;
+
+            // Variável para armazenar o preço total da comanda
+            $preco_total_comanda = 0;
+
+            foreach ($_SESSION["items_of_check"] as $item):
+                ?>
+
+
+                <tr>
+                    <td>
+                        <?= $item["id"] ?>
+                    </td>
+                    <td>
+                        <?= $item["nome"] ?>
+                    </td>
+                    <td>
+                        <?= $item["quantidade"] ?>
+                    </td>
+                    <td>
+                        <?= $item["preco_total"] ?>
+                    </td>
+                    <td>
+                        <?= $item["observacao"] ?>
+                    </td>
+                </tr>
+                <?php
+
+                // Incrementando no preço total
+                $preco_total_comanda += $item["preco_total"];
+
+            endforeach;
+            ?>
         </tbody>
     </table>
 
     <div class="total">
-        <p>Total de Itens: 3</p>
-        <p>Total da Comanda: R$ 35,00</p>
+        <p>Total da Comanda: <?=$preco_total_comanda;?></p>
     </div>
 
     <div class="button">

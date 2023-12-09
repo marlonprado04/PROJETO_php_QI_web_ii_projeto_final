@@ -66,14 +66,11 @@
 
 
     <?php
-    use Marlon\QiWebIiProjetoFinal\model\Item;
-
     // Iniciando uma sessão para fazer uso das variáveis
     session_start();
 
     // Verificando se variável de sessao "details of item" está setada e se é um array associativo criado pelo banco
     if (isset($_SESSION["details_of_item"]) && is_array($_SESSION["details_of_item"])):
-      // No caso de sim, armazena esse array em uma variável
       ?>
 
       <form method="POST" action="../Controller/ComandaController.php?operation=addItem">

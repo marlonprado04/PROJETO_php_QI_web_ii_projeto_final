@@ -1,76 +1,73 @@
-
-
 body {
-    background-color:orange;
+    background-color: orange;
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
 table {
- background-color: orange;
+    background-color: orange;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-th, td {
-    background-color:orange;
+th,
+td {
+    background-color: orange;
     border: 1px solid white;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color:rgb(236, 85, 15);
+    background-color: rgb(236, 85, 15);
     background-color: rgb(236, 85, 15);
 }
 
-.total { 
-    background-color:orange;
+.total {
+    background-color: orange;
     font-weight: bold;
     margin-top: 10px;
 }
+
 .foto {
 
-display: flex;
-justify-content:center;
+    display: flex;
+    justify-content: center;
 }
-.button {   display: flex;
+
+.button {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap:5px;
+    gap: 5px;
 }
 
-.button1{
+.button1 {
     background-color: black;
     color: white;
-   border-radius: 20px;
-   font-size: 18px;
+    border-radius: 20px;
+    font-size: 18px;
     margin: 5px 2px;
     font-weight: bold;
 }
 
-.guia{
-background-color: antiquewhite;
-margin: 100em;
+.button2 {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 5px 2px;
+    font-weight: bold;
 }
 
-.button2{ 
+.b1 {
+    display: flex;
     background-color: black;
     color: white;
-   border-radius: 20px;
-   font-size: 18px;
+    border-radius: 20px;
+    font-size: 12px;
     margin: 5px 2px;
     font-weight: bold;
- }
-
- .b1{
-display: flex;
-    background-color: black;
-    color: white;
-   border-radius: 20px;
-   font-size: 12px;
-    margin: 5px 2px;
-    font-weight: bold;
- }
+}

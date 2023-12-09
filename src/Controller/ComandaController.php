@@ -10,13 +10,13 @@ use Marlon\QiWebIiProjetoFinal\Model\Repository\ComandaRepository;
 use Marlon\QiWebIiProjetoFinal\Model\Repository\ItemRepository;
 
 // Importando autoload
-require_once dirname(__DIR__, 2)."/vendor/autoload.php";
+require_once dirname(__DIR__, 2) . "/vendor/autoload.php";
 
 // Iniciando sessão
 session_start();
 
 // Switch para selecionar operação passada via GET
-switch($_GET["operation"]) {
+switch ($_GET["operation"]) {
   // No caso do parâmetro ser addComanda
   case "addComanda":
     addComanda();
@@ -34,7 +34,7 @@ switch($_GET["operation"]) {
     listItems();
     break;
 
-  // No caso da operação passada ser "addItem"
+  // No caso da operação passada ser "addUniqueItem"
   case "addUniqueItem":
     // Executa método "addItem"
     addUniqueItem();
@@ -51,9 +51,10 @@ switch($_GET["operation"]) {
 }
 
 // Criando função add para redirecionar para o repository da comanda
-function addComanda() {
+function addComanda()
+{
   // Verificando se o método POST está vazio
-  if(empty($_POST)) {
+  if (empty($_POST)) {
     // Se estiver vazio armazena mensagem de erro e redireciona para tela de mensagem
     $_SESSION["msg_error"] = "Erro no método addcomanda da ComandaController (POST VAZIO)!";
     // Redirecionando para tela de mensagem
@@ -76,7 +77,7 @@ function addComanda() {
     $result = $comanda_repository->addComanda($comanda);
 
     // Verifica se resultado der positivo
-    if($result) {
+    if ($result) {
       // Armazena mensagem de sucesso
       $_SESSION["msg_success"] = "Comanda cadastrada com sucesso!!!";
 
@@ -99,9 +100,10 @@ function addComanda() {
 }
 
 // Função para adicionar item na comanda
-function addItem() {
+function addItem()
+{
   // Verificando se o método POST está vazio
-  if(empty($_POST)) {
+  if (empty($_POST)) {
     // Se estiver vazio armazena mensagem de erro e redireciona para tela de mensagem
     $_SESSION["msg_error"] = "Erro no método addItem da ComandaController (POST VAZIO)!";
     // Redirecionando para tela de mensagem
@@ -111,7 +113,7 @@ function addItem() {
   }
 
   // Verificando se número da comanda NÃO está setado
-  else if(!isset($_SESSION["numero_comanda"])) {
+  else if (!isset($_SESSION["numero_comanda"])) {
     // Se variável NÃO foi setada, então redireciona para a tela de cadastro de comanda
     header("location:../View/cadastro-comanda.php");
     // Encerra operação dessa classe
@@ -128,7 +130,7 @@ function addItem() {
   );
 
 
-  
+
 
   try {
     // Instanciando ComandaRepository para utilizar suas funções de acesso ao banco
@@ -138,7 +140,7 @@ function addItem() {
     $result = $comanda_repository->addItem($item_comanda);
 
     // Verifica se resultado der positivo
-    if($result) {
+    if ($result) {
       // Armazena mensagem de sucesso
       $_SESSION["msg_success"] = "Item cadastrado com sucesso!!!";
     } else {
@@ -156,9 +158,10 @@ function addItem() {
 }
 
 // Função para adicionar um único item a partir da tela de cardápio
-function addUniqueItem() {
+function addUniqueItem()
+{
   // Verificando se o id não foi passado via GET
-  if(!isset($_GET["id"])) {
+  if (!isset($_GET["id"])) {
     // Se não tiver sido passado cria uma variável para armazenar a mensagem
     $_SESSION["msg_error"] = "Erro no método addUniqueItem no ComandaController. id do item não informado via GET!!!";
 
@@ -193,7 +196,7 @@ function addUniqueItem() {
     $result = $comanda_repository->addItem($item_comanda);
 
     // Verifica se resultado der positivo
-    if($result) {
+    if ($result) {
       // Armazena mensagem de sucesso
       $_SESSION["msg_success"] = "Item cadastrado com sucesso!!!";
     } else {
@@ -211,8 +214,24 @@ function addUniqueItem() {
 
 }
 
-function listItems() {
+function listItems()
+{
 
+  // Declara variável para armazenar uma nova instância
+  $comanda_repository = new ComandaRepository();
+
+  // Verificando se o id da comanda está armazenado em uma variável de sessão
+  if (!isset($_SESSION["id_comanda"])) {
+    $_SESSION["msg_error"] = "Erro no sistema! Comanda não localizada.";
+    header("location:../View/message.php");
+    exit;
+  }
+
+  // Armazena retorno do método do repositório em uma variável de sessão
+  $_SESSION["items_of_check"] = $comanda_repository->listItems($_SESSION["id_comanda"]);
+
+  // Redirecionando 
+  header("location:../View/detalhes-comanda.php");
 }
 
 ?>
