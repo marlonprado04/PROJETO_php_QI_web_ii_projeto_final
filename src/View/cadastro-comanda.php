@@ -13,27 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Display:wght@500;700&display=swap"
         rel="stylesheet">
 
-   
-    
-    
+
+
+
     <title>Cadastro de comanda</title>
 </head>
 
 <body>
-    
-    <div class=guia>
 
-  
-    <button class=b1>Cardapio</button>
-<p></p>
-   <button class=b1>Detalhes comanda</button>
-
-
+    <div class="guia">
+        <a class="b1" href="../Controller/ItemController.php?operation=listAll">Cardapio</a>
+        <a class="b1" href="../Controller/ComandaController.php?operation=listItems">Detalhes comanda</a>
     </div>
 
 
-    <main> 
-        
+    <main>
+
 
         <form action="../Controller/ComandaController.php?operation=addComanda" method="POST" class="info">
 

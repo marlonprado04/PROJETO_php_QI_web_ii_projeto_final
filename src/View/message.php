@@ -10,6 +10,11 @@
 
 <body>
 
+  <div class="guia">
+    <a class="b1" href="../Controller/ItemController.php?operation=listAll">Cardapio</a>
+    <a class="b1" href="./cadastro-comanda.php">Cadastrar comanda</a>
+    <a class="b1" href="../Controller/ComandaController.php?operation=listItems">Detalhes Comanda</a>
+  </div>
 
 
   <?php
@@ -24,9 +29,9 @@
 
     <!-- Imprime um parágrafo com a mensagem armazenada na sessão-->
     <div>
-      <p>
+      <h1>
         <?= $_SESSION["msg_error"]; ?>
-      </p>
+      </h1>
     </div>
 
     <!-- Depois "destroi" a variável armazenada na sessão -->
@@ -43,9 +48,9 @@
 
     <!-- Imprime um parágrafo com a mensagem armazenada na sessão-->
     <div>
-      <p>
+      <h1>
         <?= $_SESSION["msg_warning"]; ?>
-      </p>
+      </h1>
     </div>
 
     <!-- Depois "destroi" a variável armazenada na sessão -->
@@ -63,9 +68,9 @@
 
     <!-- Imprime um parágrafo com a mensagem armazenada na sessão-->
     <div>
-      <p>
+      <h1>
         <?= $_SESSION["msg_success"]; ?>
-      </p>
+      </h1>
     </div>
 
     <?php

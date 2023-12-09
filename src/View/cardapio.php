@@ -14,7 +14,7 @@
 
   <div class="container">
     <h1>POA-BURGUER: Explorando Sabores Exclusivos em Cada Mordida</h1>
- 
+
     <a class=b1 href="cadastro-comanda.php">Cadastrar comanda</a>
     <a class=b1 href="../Controller/ComandaController.php?operation=listItems">Detalhes comanda</a>
 
@@ -51,9 +51,11 @@
             <?= $item["preco"] ?>
           </p>
           <!-- Botão para redirecionar para controller que redireciona para os detalhes de acordo com o ID do item -->
-          <a class="button" href="../Controller/ItemController.php?operation=showDetails&id=<?= $item["id"] ?>">DETALHES</a> 
-          
-          <a class="button" href="../Controller/ComandaController.php?operation=addUniqueItem&id=<?= $item["id"] ?>">ADICIONAR</a>
+          <a class="button"
+            href="../Controller/ItemController.php?operation=showDetails&id=<?= $item["id"] ?>">DETALHES</a>
+
+          <a class="button"
+            href="../Controller/ComandaController.php?operation=addUniqueItem&id=<?= $item["id"] ?>">ADICIONAR</a>
         </div>
         <?php
       endforeach;
@@ -61,9 +63,6 @@
       ?>
 
     </main>
-
-    <button class=b2>Detalhes-comanda</button>
-
   </div>
 
 </body>

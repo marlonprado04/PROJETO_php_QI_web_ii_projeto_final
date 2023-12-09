@@ -15,7 +15,7 @@
     ?>
 
     <div class=guia>
-        <button class=b1>Cardapio</button>
+        <a class="b1" href="../Controller/ItemController.php?operation=listAll">Cardapio</a>
     </div>
 
     <div class="foto">
@@ -92,8 +92,7 @@
     </div>
 
     <div class="button">
-        <button class="button1">Finalizar pedido </button>
-        <button class="button2">Voltar</button>
+        <a class="button1">Finalizar pedido </a>
     </div>
 
 
