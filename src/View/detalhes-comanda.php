@@ -10,6 +10,10 @@
 
 <body>
 
+    <?php
+    session_start();
+    ?>
+
     <div class=guia>
         <button class=b1>Cardapio</button>
     </div>
@@ -19,7 +23,7 @@
     </div>
 
 
-    <h2 class="titulo">Detalhes da Comanda</h2>
+    <h2 class="titulo">Detalhes da Comanda: <?=$_SESSION["numero_comanda"];?></h2>
 
     <table>
         <thead>
@@ -33,10 +37,6 @@
         </thead>
         <tbody>
             <?php
-
-            session_start();
-
-
 
             if (empty($_SESSION["items_of_check"])):
                 ?>
@@ -86,7 +86,9 @@
     </table>
 
     <div class="total">
-        <p>Total da Comanda: <?=$preco_total_comanda;?></p>
+        <p>Total da Comanda:
+            <?= $preco_total_comanda; ?>
+        </p>
     </div>
 
     <div class="button">
