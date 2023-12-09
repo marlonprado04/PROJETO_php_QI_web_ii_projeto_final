@@ -3,6 +3,8 @@
 // Definindo namespace
 namespace Marlon\QiWebIiProjetoFinal\Controller;
 
+use Exception;
+use Marlon\QiWebIiProjetoFinal\Model\Item;
 use Marlon\QiWebIiProjetoFinal\Model\Repository\ItemRepository;
 
 // Importando autoload
@@ -23,6 +25,10 @@ switch ($_GET["operation"]) {
   case "showDetails":
     // Executa método "showDetails"
     showDetails();
+    break;
+
+  case "addItem":
+    addItem();
     break;
   default:
     // Por padrão, redireciona para a tela de mensagem dizendo que a operação é inválida através da variável de sessão
@@ -58,7 +64,7 @@ function showDetails()
     // Verificando se a consulta não retornou algo vazio
     if (!empty($details_of_item)) {
       // Armazenando os detalhes do item em uma variável de sessão
-      $_SESSION["details_of_item"] = $details_of_item[0]; 
+      $_SESSION["details_of_item"] = $details_of_item[0];
 
       // Redirecionando para a tela de detalhes
       header("location:../View/detalhes-item.php");
@@ -77,6 +83,38 @@ function showDetails()
     // Redirecionando para mensagem
     header("location:../View/message.php");
   }
+}
+
+function addItem()
+{
+  if (empty($_POST)) {
+
+    $_SESSION["msg_error"] = "Erro. O POST está vazio no addItem";
+
+    header("location:../View/message.php");
+
+    exit;
+  }
+
+  $item = new Item($_POST["nome"], $_POST["preco"]);
+  $item->descricao = $_POST["descricao"];
+  $item->imagem = $_POST["imagem"];
+
+  $item_repository = new ItemRepository();
+
+  try{
+    $item_repository->addItem($item);
+
+    $_SESSION["msg_success"] = "Item cadastrado com sucesso!";
+  }
+  catch(Exception $error){
+    $_SESSION["msg_error"] = "Deu o seguinte erro: <br> $error";
+  }
+  finally{
+    header("location:../View/message.php");
+    exit;
+  }
+
 }
 
 ?>

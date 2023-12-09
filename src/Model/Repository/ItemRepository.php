@@ -45,6 +45,18 @@ class ItemRepository
     // Retornando um array associativo a partir da execução da query 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  public function addItem($item)
+  {
+    $stmt = $this->connection->prepare("INSERT INTO item (nome, preco, descricao, imagem) VALUES (?, ?, ?, ?)");
+
+    $stmt->bindParam(1, $item->nome);
+    $stmt->bindParam(2, $item->preco);
+    $stmt->bindParam(3, $item->descricao);
+    $stmt->bindParam(4, $item->imagem);
+
+    return $stmt->execute();
+  }
 }
 
 ?>

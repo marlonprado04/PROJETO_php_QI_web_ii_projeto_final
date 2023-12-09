@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(236, 85, 15);
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: orange;
+    background-position: auto;
+    width: 500px;
+    height: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: aliceblue;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+/* Adicione outras regras de estilo conforme necessário */
+
+/* Campo Nome */
+label,
+input {
+    margin-bottom: 10px;
+}
+
+/* Campo Imagem (Link para Web) */
+label[for="imagem"],
+input#imagem {
+    margin-bottom: 20px;
+}
+
+/* Botão de Envio */
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
