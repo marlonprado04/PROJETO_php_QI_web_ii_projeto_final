@@ -91,7 +91,7 @@
         </p>
     </div>
 
-
+    <a class="button1" href="../Controller/ComandaController.php?operation=finish">Finalizar o pedido</a>
 
 </body>
 

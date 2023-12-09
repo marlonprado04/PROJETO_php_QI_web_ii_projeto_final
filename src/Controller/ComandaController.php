@@ -40,6 +40,12 @@ switch ($_GET["operation"]) {
     addUniqueItem();
     break;
 
+  // No caso da operação passada ser "addUniqueItem"
+  case "finish":
+    // Executa método "addItem"
+    finish();
+    break;
+
   //Operação padrão, caso não receba uma pensada inicialmente
   default:
     // Armazena na variável de sessão "msg_error" a mensagem de operação inválida
@@ -222,7 +228,7 @@ function listItems()
 
   // Verificando se o id da comanda está armazenado em uma variável de sessão
   if (!isset($_SESSION["id_comanda"])) {
-    $_SESSION["msg_error"] = "Erro no sistema! Comanda não localizada.";
+    $_SESSION["msg_error"] = "Erro no sistema! Comanda não localizada. Por favor, cadastre uma comanda!";
     header("location:../View/message.php");
     exit;
   }
@@ -232,6 +238,22 @@ function listItems()
 
   // Redirecionando 
   header("location:../View/detalhes-comanda.php");
+  exit;
 }
 
+function finish(){
+  
+  // Armazenando mensagem de sucesso
+  $_SESSION["msg_success"] = "Comanda finalizada com sucesso! Dirija-se ao caixa!";
+
+  // Excluindo variáveis de sessão
+  unset($_SESSION["items_of_check"]);
+  unset($_SESSION["details_of_items"]);
+  unset($_SESSION["id_comanda"]);
+  unset($_SESSION["numero_comanda"]);
+  
+  // Redirecionando o usuário
+  header("location:../View/message.php");
+  exit;
+}
 ?>
