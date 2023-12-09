@@ -17,23 +17,29 @@ td {
     border: 1px solid white;
     padding: 8px;
     text-align: left;
+    font-size: 14px;
+    /* Tamanho da fonte ajustado para dispositivos móveis */
 }
 
 th {
     background-color: rgb(236, 85, 15);
-    background-color: rgb(236, 85, 15);
+    color: white;
+    /* Cor do texto para melhor legibilidade */
 }
 
 .total {
     background-color: orange;
     font-weight: bold;
     margin-top: 10px;
+    font-size: 16px;
+    /* Tamanho da fonte ajustado para dispositivos móveis */
 }
 
 .foto {
-
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    /* Adicionado espaço superior para melhorar o layout */
 }
 
 .button {
@@ -42,41 +48,28 @@ th {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    margin-top: 20px;
+    /* Adicionado espaço superior para melhorar o layout */
 }
 
-.button1 {
+.button1,
+.button2,
+.b1 {
     background-color: black;
     color: white;
     border-radius: 20px;
     font-size: 18px;
     margin: 5px 2px;
     font-weight: bold;
-
     padding: 10px;
     text-decoration: none;
     cursor: pointer;
     align-content: center;
-}
-
-.button2 {
-    background-color: black;
-    color: white;
-    border-radius: 20px;
-    font-size: 18px;
-    margin: 5px 2px;
-    font-weight: bold;
 }
 
 .b1 {
-    background-color: black;
-    width: 60px;
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    align-content: center;
-    color: white;
-    border-radius: 20px;
     font-size: 12px;
-    margin: 5px 2px;
-    font-weight: bold;
+    /* Tamanho da fonte ajustado para dispositivos móveis */
+    width: auto;
+    /* Removido o valor fixo da largura para melhor adaptação */
 }

@@ -91,10 +91,6 @@
         </p>
     </div>
 
-    <div class="button">
-        <a class="button1">Finalizar pedido </a>
-    </div>
-
 
 
 </body>
