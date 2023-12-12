@@ -78,6 +78,18 @@ class ComandaRepository
     return $result;
   }
 
+  # Função para remover o item
+  public function removeItem($id)
+  {
+    # Prepara conexão para realizar o delete do ID
+    $stmt = $this->connection->prepare("DELETE FROM item_comanda WHERE id = ?");
+    $stmt->bindParam(1, $id, PDO::PARAM_INT);
+
+    # Executa
+    return $stmt->execute();
+  }
+
+
 }
 
 ?>

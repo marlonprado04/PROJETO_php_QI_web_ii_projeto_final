@@ -23,7 +23,9 @@
     </div>
 
 
-    <h2 class="titulo">Detalhes da Comanda: <?=$_SESSION["numero_comanda"];?></h2>
+    <h2 class="titulo">Detalhes da Comanda:
+        <?= $_SESSION["numero_comanda"]; ?>
+    </h2>
 
     <table>
         <thead>
@@ -32,7 +34,7 @@
                 <th>Nome</th>
                 <th>Quantidade</th>
                 <th>Preço total</th>
-                <th>Observações</th> 
+                <th>Observações</th>
                 <th>Remover produto</th>
             </tr>
         </thead>
@@ -75,7 +77,10 @@
                     <td>
                         <?= $item["observacao"] ?>
                     </td>
-                    <TD><A href=>Remover</A></TD>
+                    <tb>
+                        <a
+                            href="../Controller/ComandaController.php?operation=removeItem&id_item=<?= $item["id"] ?>">Remover</A>
+                    </tb>
                 </tr>
                 <?php
 

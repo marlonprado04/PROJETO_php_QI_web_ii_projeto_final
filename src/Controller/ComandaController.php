@@ -45,6 +45,9 @@ switch ($_GET["operation"]) {
     // Executa método "addItem"
     finish();
     break;
+  case "removeItem":
+    // Executa método para remover item
+    removeItem();
 
   //Operação padrão, caso não receba uma pensada inicialmente
   default:
@@ -241,8 +244,9 @@ function listItems()
   exit;
 }
 
-function finish(){
-  
+function finish()
+{
+
   // Armazenando mensagem de sucesso
   $_SESSION["msg_success"] = "Comanda finalizada com sucesso! Dirija-se ao caixa!";
 
@@ -251,9 +255,36 @@ function finish(){
   unset($_SESSION["details_of_items"]);
   unset($_SESSION["id_comanda"]);
   unset($_SESSION["numero_comanda"]);
-  
+
   // Redirecionando o usuário
   header("location:../View/message.php");
   exit;
 }
+
+function removeItem()
+{
+  // Cria instância do repositório de comanda
+  $comanda_repository = new ComandaRepository();
+
+  // Verifica se o ID do item não foi passado via get
+  if (!isset($_GET["id_item"])) {
+    $_SESSION["msg_error"] = "Erro no sistema! ID do item não passado para que possa ser excluído!";
+    header("location:../View/message.php");
+    exit;
+  }
+
+  // Converter o ID em int
+  $id = intval($_GET["id"]);
+
+  // Executa a exclusão do item no repositório
+  $comanda_repository->removeItem($id);
+
+  // Armazena mensagem e redireciona
+  $_SESSION["msg_success"] = "Item removido com sucesso!";
+  header("location:../View/message.php");
+  exit;
+}
+
+
+
 ?>
