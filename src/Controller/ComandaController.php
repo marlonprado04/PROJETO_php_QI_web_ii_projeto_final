@@ -48,7 +48,7 @@ switch ($_GET["operation"]) {
   case "removeItem":
     // Executa método para remover item
     removeItem();
-
+    break;
   //Operação padrão, caso não receba uma pensada inicialmente
   default:
     // Armazena na variável de sessão "msg_error" a mensagem de operação inválida
@@ -274,15 +274,18 @@ function removeItem()
   }
 
   // Converter o ID em int
-  $id = intval($_GET["id"]);
+  $id = intval($_GET["id_item"]);
 
   // Executa a exclusão do item no repositório
   $comanda_repository->removeItem($id);
 
-  // Armazena mensagem e redireciona
-  $_SESSION["msg_success"] = "Item removido com sucesso!";
-  header("location:../View/message.php");
-  exit;
+  // Remove itens da comanda se existir
+  if (isset($_SESSION["items_of_check"])) {
+    unset($_SESSION["items_of_check"]);
+  }
+
+  // Redireciona
+  header("location:../Controller/ComandaController.php?operation=listItems");
 }
 
 
