@@ -11,7 +11,9 @@ body {
     margin: 0;
 }
 
+
 h1 {
+   
     margin-bottom: 20px;
 }
 
@@ -26,6 +28,7 @@ form {
 }
 
 label { 
+    font-weight: bold;
     background-color: rgb(236, 85, 15);
     display: block;
     margin-top: 25px;
@@ -35,6 +38,7 @@ label {
 
 
 input[type="submit"] {
+    font-weight: bold;
     background-color: #080909; /* Nova cor de fundo */
     color: rgb(241, 238, 238); /* Nova cor do texto */
     padding: 10px;
@@ -44,6 +48,7 @@ input[type="submit"] {
 }
 
 .botao-cadastro {
+    font-weight: bold;
     text-align: center;
  text-decoration: solid;
     margin-top: 50px;

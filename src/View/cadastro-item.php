@@ -10,7 +10,7 @@
 
 <body>
 
-    <h2 class=titulo >Cadastro de Item</h2>
+    <h1 class= titulo >Cadastro de Item</h2>
 
     <form action="../Controller/ItemController.php?operation=addItem" method="POST">
         <!-- Campo Nome -->
