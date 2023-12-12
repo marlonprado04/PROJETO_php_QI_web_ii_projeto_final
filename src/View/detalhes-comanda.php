@@ -77,10 +77,9 @@
                     <td>
                         <?= $item["observacao"] ?>
                     </td>
-                    <tb>
-                        <a
-                            href="../Controller/ComandaController.php?operation=removeItem&id_item=<?= $item["id"] ?>">Remover</A>
-                    </tb>
+                    <td>
+                        <a href="../Controller/ComandaController.php?operation=removeItem&id_item=<?= $item["id"] ?>">Remover</a>
+                    </td>
                 </tr>
                 <?php
 
