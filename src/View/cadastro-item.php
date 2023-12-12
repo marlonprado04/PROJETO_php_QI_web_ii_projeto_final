@@ -10,7 +10,7 @@
 
 <body>
 
-    <h2>Cadastro de Item</h2>
+    <h2 class=titulo >Cadastro de Item</h2>
 
     <form action="../Controller/ItemController.php?operation=addItem" method="POST">
         <!-- Campo Nome -->
@@ -37,10 +37,12 @@
 
         <br>
 
-        <!-- Botão de Envio -->
-        <input type="submit" value="Cadastrar Item">
+        <div class=botao-cadastro>
+            <input  type="submit" value="Cadastrar Item">
+        </div> <!-- Botão de Envio -->
+         
     </form>
-
+       
 </body>
 
 </html>
