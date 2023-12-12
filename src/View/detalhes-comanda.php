@@ -32,7 +32,8 @@
                 <th>Nome</th>
                 <th>Quantidade</th>
                 <th>Preço total</th>
-                <th>Observações</th>
+                <th>Observações</th> 
+                <th>Remover produto</th>
             </tr>
         </thead>
         <tbody>
@@ -74,6 +75,7 @@
                     <td>
                         <?= $item["observacao"] ?>
                     </td>
+                    <TD><A href=>Remover</A></TD>
                 </tr>
                 <?php
 
