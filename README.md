@@ -60,4 +60,4 @@ Para utilizar o programa seguir os passos abaixo:
 
 ## Próximos passos
 
-Eu não sou muito bom no front, mas umas alterações que vc pode fazer são: colocar um backround (vou mandar um exemplo), na parte amarela da div central deixar cinza translúcido (vou mandar um exemplo tbm), dar um padding maior nos botões e deixar eles translúcidos com a cor do texto laranja talvez, dar um border radius maior nos botões e da div central, e deixar o textarea transparent com uma border ou também deixar em um tom de cinza.
+Eu não sou muito bom no front, mas umas alterações que vc pode fazer são: colocar um backround (vou mandar um exemplo), na parte amarela da div central deixar cinza translúcido (vou mandar um exemplo tbm), dar um padding maior nos botões e deixar eles translúcidos com a cor do texto laranja talvez, dar um border radius maior nos botões e da div central, e deixar o textarea transparent com uma border ou também deixar em um tom de cinza
