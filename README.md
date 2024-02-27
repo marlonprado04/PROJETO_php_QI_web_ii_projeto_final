@@ -10,6 +10,7 @@ Projeto final da disciplina de Web II do curso Técnico em Informática
   - [Links Internos](#links-internos)
   - [Informações do ambiente](#informações-do-ambiente)
   - [Como usar o programa](#como-usar-o-programa)
+  - [Próximos passos](#próximos-passos)
 
 ## Links externos
 
@@ -56,3 +57,7 @@ Para utilizar o programa seguir os passos abaixo:
 4. Utilizar o script de criação de banco contido na pasta `.banco_de_dados` para criar a estrutura inicial do banco de dados
 5. Utilizar o script de adição de valores ao banco contido na pasta `.banco_de_dados`
 6. Acessar o localhost na porta configurada no XAMPP e acessar a pasta do projeto
+
+## Próximos passos
+
+Eu não sou muito bom no front, mas umas alterações que vc pode fazer são: colocar um backround (vou mandar um exemplo), na parte amarela da div central deixar cinza translúcido (vou mandar um exemplo tbm), dar um padding maior nos botões e deixar eles translúcidos com a cor do texto laranja talvez, dar um border radius maior nos botões e da div central, e deixar o textarea transparent com uma border ou também deixar em um tom de cinza.
