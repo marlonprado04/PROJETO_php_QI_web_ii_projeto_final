@@ -5,7 +5,7 @@ USE poa_burguer;
 INSERT INTO item (nome, preco, descricao, imagem)
 VALUES
 
-    ('JARDIM BOTANICO',30.30, 'Pao Com Gergelin, Hamburguer De Soja, Tomate,Rucula,Cebola Roxa.', 'https://bing.com/th?id=OSK.67c9c03e17a2b0f4c3824e28bea284b8'),
+    ('JARDIM BOTANICO',30.30, 'Pao Com Gergelin, Hamburguer De Soja, Tomate, Rucula, Cebola Roxa.', 'https://bing.com/th?id=OSK.67c9c03e17a2b0f4c3824e28bea284b8'),
 
     ('BOM FIM',32.50, 'Pao Cervejinha, Hamburguer Bovino, Maionese Da Casa, Molho Champignon e Rucula.', 'https://www.minhareceita.com.br/app/uploads/2020/07/dhamburguer-champignon.jpg'),
 

@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>detalhes item</title>
+  <title>Detalhes Item</title>
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/detalhes-item.css">
+  <link rel="stylesheet" href="./src/css/global.css">
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -49,17 +50,14 @@
 </head>
 
 <body>
-  <div class="guia">
-    <a class="b1" href="../Controller/ItemController.php?operation=listAll">Cardapio</a>
-    <a class="b1" href="./cadastro-comanda.php">Cadastrar comanda</a>
-    <a class="b1" href="../Controller/ComandaController.php?operation=listItems">Detalhes comanda</a>
+  <div class="nav">
+    <a class="nav_button" href="../Controller/ItemController.php?operation=listAll">Cardapio</a>
+    <a class="nav_button" href="./cadastro-comanda.php">Cadastrar comanda</a>
+    <a class="nav_button" href="../Controller/ComandaController.php?operation=listItems">Detalhes comanda</a>
   </div>
 
 
-  <div class="container">
-
-
-
+  <main class="container">
 
     <?php
     // Iniciando uma sessão para fazer uso das variáveis
@@ -74,19 +72,21 @@
           <img class="item_image" src="<?= $_SESSION["details_of_item"]["imagem"] ?>">
         </div>
 
-        <div class="conteudo">
+        <div class="content">
           <h3 class="item_name">
             <?= $_SESSION["details_of_item"]["nome"] ?>
           </h3>
+
           <p class="item_description">
             <?= $_SESSION["details_of_item"]["descricao"] ?>
           </p>
-          <input readonly name="item_price" class="item_price"
-            value="<?= $_SESSION["details_of_item"]["preco"] ?>"></input>
+
+          <input readonly name="item_price" class="item_price" value="<?= $_SESSION["details_of_item"]["preco"] ?>">
+          </input>
 
           <input type="hidden" name="item_id" value="<?= $_SESSION["details_of_item"]["id"] ?>">
 
-          <div class="botoes">
+          <div class="buttons">
             <button class="item_reduc">-</button>
             <input type="text" name="item_quantity" class="item_quantity" value="1" oninput="validateNumber(this)"
               required>
@@ -94,18 +94,18 @@
           </div>
 
 
-          <textarea class="observacao" placeholder="Observações..." name="item_observation"></textarea>
+          <textarea class="observation" placeholder="Observações..." name="item_observation"></textarea>
 
-          <a class="item_return" href="../Controller/ItemController.php?operation=listAll">VOLTAR</a>
-          <button type="submit" class="item_adds">ADICIONAR</button>
-
+          <a class="button_return" href="../Controller/ItemController.php?operation=listAll">VOLTAR</a>
+          <button class="button_add" type="submit">ADICIONAR</button>
+        </div>
       </form>
-    </div>
+    </main>
 
   <?php else: ?>
-    <div>
+    <main>
       <p>Nenhum item localizado com o ID passado!</p>
-    </div>
+    </main>
   <?php endif; ?>
 
   </div>
